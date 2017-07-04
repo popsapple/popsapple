@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { MainVisualComponent } from './app.component';
+import { MainVisualItemComponent } from './main_visual/mainvisual.component';
+import { GnbComponent } from './gnb/gnb.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    MainVisualComponent,MainVisualItemComponent,GnbComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MainVisualComponent]
 })
 export class AppModule { }

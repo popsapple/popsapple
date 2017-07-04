@@ -9,6 +9,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"npm install http-server -g \" \"npm run http-server /dist\" ",
+    "http-server": "http-server",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

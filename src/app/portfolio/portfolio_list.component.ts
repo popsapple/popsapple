@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'portfolio-list',
   templateUrl: './portfolio_list.component.html',
-  styleUrls: ['../../assets/css/portfolio_list.component.min.css']
+  styleUrls: ['./../../assets/css/portfolio_list.component.min.css']
 })
 export class PortfolioListComponent {
   portfolio:Object = {

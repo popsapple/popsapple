@@ -132,6 +132,11 @@ $.fn.onMovingFllowingItem = function(options){
 
 $(document).ready(function() {
   if($(".portfolio_list > ul > li")){
-    $(".portfolio_list > ul > li").onMovingFllowingItem();
+    img = new Image();
+    img.src = $(".portfolio_list > ul > li").eq($(".portfolio_list > ul > li").length-1).find("img").attr("src");
+    img.onload = function(){
+      console.log("이미지 전부 로드됨");
+      $(".portfolio_list > ul > li").onMovingFllowingItem();
+    };
   }
 });

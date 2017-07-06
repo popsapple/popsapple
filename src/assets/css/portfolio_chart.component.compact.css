@@ -1,0 +1,12 @@
+/** variables **/
+.glyphicon { font-size: 1.5rem; color: #ffffff; width: 3.5rem; text-align: center; margin-bottom: 1rem; }
+
+.glyphicon.design:before { content: "\270f"; }
+
+.glyphicon.publisher:before { content: "\e237"; }
+
+.glyphicon.developer:before { content: "\e019"; }
+
+.chartdata { width: 30%; max-width: 3.5rem; display: inline-block; margin-right: 1rem; }
+
+.chartdata:last-child { margin-right: 0rem; }

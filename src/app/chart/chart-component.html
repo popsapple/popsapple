@@ -1,0 +1,12 @@
+<div class="chartdata">
+<strong [attr.class]="type1+' glyphicon'">
+  <span class='blind_item'>{{type1}}</span>
+</strong>
+<canvas baseChart
+  [data]="[chartdata1,chartdata2]"
+  [chartType]="pieChartType"
+  [labels]="pieChartLabels"
+  [colors]="chartColors"
+  [options]="chartOptions"
+  (mouseover)="chartHovered($event)"></canvas>
+</div>

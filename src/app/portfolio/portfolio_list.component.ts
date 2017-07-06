@@ -7,7 +7,7 @@ import { LoadTemplateScript } from '../loadjs/loadscript.service';
   providers: [LoadTemplateScript]
 })
 export class PortfolioListComponent {
-  portfolio:Object = {
+  portfolio:any = {
     'portfolio_list':[
       {
         "url": "http://popsapple.herokuapp.com/",

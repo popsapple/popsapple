@@ -27,8 +27,10 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "chart.js": "^2.6.0",
     "core-js": "^2.4.1",
     "express": "^4.15.3",
+    "ng2-charts": "^1.6.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
@@ -55,5 +57,16 @@
     "typescript": "~2.3.3",
     "bootstrap-sass": "^3.3.7",
     "http-server": "^0.9.0"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popsapple/popsapple.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/popsapple/popsapple/issues"
+  },
+  "homepage": "https://github.com/popsapple/popsapple#readme"
 }

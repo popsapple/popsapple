@@ -1,3 +1,4 @@
+@import "./init.sass"
 .navbar
   position: absolute
   z-index: 12
@@ -16,10 +17,98 @@
   right: 1.5rem
 .navbar-header .gnb-toggle-btn .icon-bar
   display: block
-  width: 2.5rem
+  width: 3rem
   height: 0.3rem
   border-radius: 0.5rem
   background: #ffffff
   margin-bottom: 0.8rem
-.navbar-header .gnb-toggle-btn .icon-bar:last-child
+  transition: transform 1s 0s, opacity 1s 0s
+.navbar-header .gnb-toggle-btn .icon-bar:nth-child(1)
+  transform: rotate(-45deg)
+  transform-origin: 100% 100%
+.navbar-header .gnb-toggle-btn .icon-bar:nth-child(3)
+  transform: rotate(45deg)
+  transform-origin: 100% 0%
+.navbar-header .gnb-toggle-btn .icon-bar:nth-child(2)
+  opacity: 0
+.navbar-header .gnb-toggle-btn.collapsed .icon-bar
+  opacity: 1
+  transform: rotate(0deg) !important
+  transition: transform 1s 0s, opacity 1s 0s
+
+.navbar-header .gnb-toggle-btn.collapsed .icon-bar:last-child
   margin-bottom: 0rem
+.navbar-collapse.gnb-navbar
+  display: block !important
+  width: 100vw
+  height: 100vh !important
+  position: absolute
+  top: 0rem
+  left: 0rem
+  padding: 0rem
+  margin: 0rem
+  text-align: center
+  background: url(./../image/transparent_black.png)
+.navbar-collapse.gnb-navbar.load
+  width: 0rem
+.navbar-collapse.gnb-navbar.out
+  display: block !important
+  overflow: hidden !important
+  width: 0rem !important
+  transition: width 0s 2s
+.navbar-collapse.gnb-navbar.in
+  display: block !important
+  height: 100vh !important
+  width: 100vw
+.navbar-collapse.gnb-navbar div
+  display: table !important
+  height: 100%
+  width: 100%
+.navbar-collapse.gnb-navbar.load ul
+  display: none
+.navbar-collapse.gnb-navbar ul
+  display: table-cell
+  vertical-align: middle
+  width: 100%
+  float: none
+@keyframes gnb_li_load
+  0%
+    max-width: 0rem
+  10%
+    max-width: 0rem
+  100%
+    max-width: 15rem
+@keyframes gnb_li_unload
+  0%
+    max-width: 15rem
+  50%
+    max-width: 15rem
+  100%
+    max-width: 0rem
+.navbar-collapse.gnb-navbar ul li,
+.navbar-collapse.gnb-navbar.out ul li
+  display: block !important
+  width: 15rem
+  max-width: 0rem
+  padding: 2rem 0rem
+  margin: auto
+  text-align: center
+  overflow: hidden
+  float: none
+  animation: gnb_li_unload 2s 0s
+.navbar-collapse.gnb-navbar.in ul li
+  display: block !important
+.navbar-collapse.gnb-navbar ul li
+  width: 15rem
+  max-width: 15rem
+  animation: gnb_li_load 2s 0s
+.navbar-collapse.gnb-navbar ul li a
+  display: block
+  font-size: 1.5rem
+  color: #ffffff
+  width: 15rem
+  margin: auto
+  text-align: center
+  text-transform: uppercase
+  &:hover
+    color: $brand-white-darken

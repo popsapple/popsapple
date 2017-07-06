@@ -2676,10 +2676,15 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media print { .hidden-print { display: none !important; } }
 
+/** variables **/
 html body { font-family: "Noto Sans KR", "Roboto", sans-serif; }
 
 .carousel-control { width: 5rem; z-index: 11; }
 
-.btn-default.bg-none { background-color: transparent; border-color: #d0d0d0; color: #d0d0d0; transition: color 1s 0s, border-color 1s 0s; }
+html body .btn-default.bg-none { background-color: transparent; border-color: #d0d0d0; color: #d0d0d0; transition: color 1s 0s, border-color 1s 0s; }
 
-.btn-default.bg-none:hover { border-color: #fff; color: #fff; }
+html body .btn-default.bg-none:hover { background-color: transparent; border-color: #fff; color: #fff; }
+
+ul li, ol li { list-style: none; }
+
+.blind_item, figcaption { position: absolute !important; width: 1px !important; display: inline-block !important; overflow: hidden !important; padding-left: 2px !important; }

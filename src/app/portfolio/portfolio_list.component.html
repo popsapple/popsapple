@@ -2,16 +2,20 @@
   <ul>
     <li *ngFor="let item of portfolio.portfolio_list; let i=index; let first=first; let last=last;">
       <section class="portfolio_info">
-        <div class="top"><div class="table">
-          <div class="cell">
-            <h3>{{item.title}}</h3>
-            <div>
-              <chart-parent [chartdata01]="item.des_percent" [chartdata02]="100-item.des_percent" [type]="'design'"></chart-parent>
-              <chart-parent [chartdata01]="item.publ_percent" [chartdata02]="100-item.publ_percent" [type]="'publisher'"></chart-parent>
-              <chart-parent [chartdata01]="item.dev_percent" [chartdata02]="100-item.dev_percent" [type]="'developer'"></chart-parent>
+        <div class="top">
+            <a [href]="item.url" class="figure" target="_blank">
+              <div class="table">
+              <div class="cell">
+                <h3>{{item.title}}</h3>
+                <div>
+                  <chart-parent [chartdata01]="item.des_percent" [chartdata02]="100-item.des_percent" [type]="'design'"></chart-parent>
+                  <chart-parent [chartdata01]="item.publ_percent" [chartdata02]="100-item.publ_percent" [type]="'publisher'"></chart-parent>
+                  <chart-parent [chartdata01]="item.dev_percent" [chartdata02]="100-item.dev_percent" [type]="'developer'"></chart-parent>
+                </div>
+              </div>
             </div>
-          </div>
-        </div></div>
+          </a>
+        </div>
         <figure>
           <picture>
             <img [src]="item.thumnail" [alt]="item.title">

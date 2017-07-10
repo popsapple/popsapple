@@ -3,6 +3,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import "https://fonts.googleapis.com/earlyaccess/notosanskr.css";
 @import "https://fonts.googleapis.com/css?family=Roboto";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
 body { margin: 0; }
@@ -2681,10 +2682,18 @@ html body { font-family: "Noto Sans KR", "Roboto", sans-serif; }
 
 .carousel-control { width: 5rem; z-index: 11; }
 
-html body .btn-default.bg-none { background-color: transparent; border-color: #d0d0d0; color: #d0d0d0; transition: color 1s 0s, border-color 1s 0s; }
+html body .btn-default.bg-none { background-color: transparent; border-color: #eeeeee; color: #eeeeee; transition: color 1s 0s, border-color 1s 0s; }
 
-html body .btn-default.bg-none:hover { background-color: transparent; border-color: #fff; color: #fff; }
+html body .btn-default.bg-none:hover { background-color: transparent; border-color: #ffffff; color: #ffffff; }
 
 ul li, ol li { list-style: none; }
 
 .blind_item, figcaption { position: absolute !important; width: 1px !important; display: inline-block !important; overflow: hidden !important; padding-left: 2px !important; }
+
+html body .title_line { display: block; font-size: 2rem; color: #000; padding: 8rem 0rem 5.5rem 0rem; margin: 0rem; text-transform: uppercase; text-align: center; }
+
+html body .title_line .carrot { display: block; width: 1.8rem; height: 0.3rem; background-color: #384d9f; font-size: 1.4rem; transform: rotate(45deg); margin: 0rem auto 3rem auto; }
+
+html body .title_line strong { display: block; font-weight: 700; font-size: 2rem; color: #000; }
+
+html body .title_line em { display: block; font-weight: 700; font-size: 1.4rem; margin: 1rem auto 0rem auto; color: #333333; font-style: normal; }

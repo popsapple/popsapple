@@ -10,13 +10,13 @@ html body
   z-index: 11
 html body .btn-default.bg-none
   background-color: transparent
-  border-color: #d0d0d0
-  color: #d0d0d0
+  border-color: $gray-lighter
+  color: $gray-lighter
   transition: color 1s 0s, border-color 1s 0s
   &:hover
     background-color: transparent
-    border-color: #fff
-    color: #fff
+    border-color: $brand-white
+    color: $brand-white
 ul li, ol li
   list-style: none
 .blind_item, figcaption
@@ -25,3 +25,31 @@ ul li, ol li
   display: inline-block !important
   overflow: hidden !important
   padding-left: 2px !important
+html body .title_line
+  display: block
+  font-size: 2rem
+  color: $gray-base
+  padding: 8rem 0rem 5.5rem 0rem
+  margin: 0rem
+  text-transform: uppercase
+  text-align: center
+  .carrot
+    display: block
+    width: 1.8rem
+    height: 0.3rem
+    background-color: $brand-primary
+    font-size: 1.4rem
+    transform: rotate(45deg)
+    margin: 0rem auto 3rem auto
+  strong
+    display: block
+    font-weight: 700
+    font-size: 2rem
+    color: $gray-base
+  em
+    display: block
+    font-weight: 700
+    font-size: 1.4rem
+    margin: 1rem auto 0rem auto
+    color: $gray-dark
+    font-style: normal

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/** variables **/
+ul.profile_img { padding: 0rem; text-align: center; }
+
+ul.profile_img figure img { display: block; max-width: 14rem; border-radius: 50%; margin: 3rem auto 5rem auto; }
+
+.profile_section_con { background: #fbfbfb; }
+
+.profile_section_con p { display: block; width: 100%; text-align: center; line-height: 2.3rem; margin-top: 3rem; padding-bottom: 8.3rem; }
+
+.profile_section_con p em { display: block; text-align: center; font-style: normal; }
+
+.profile_section_con p em span { display: inline-block; color: #ef4238; font-weight: 700; margin-top: 1rem; margin-right: 1rem; }
+
+.profile_section_con p em span:after { display: inline-block; margin-left: 1rem; content: "·"; }
+
+.profile_section_con p em span:last-child { margin-right: 0rem; }
+
+.profile_section_con p em span:last-child:after { display: none; }

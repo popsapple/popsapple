@@ -52,4 +52,8 @@ export class MainSkillListService {
   public chartHovered(e:any):void {
     this._chart.refresh();
   }
+  // events
+  public chartClicked(e:any):void {
+
+  }
 }

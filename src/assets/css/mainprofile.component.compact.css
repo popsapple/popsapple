@@ -5,13 +5,21 @@ ul.profile_img { padding: 0rem; text-align: center; }
 
 ul.profile_img figure img { display: block; max-width: 14rem; border-radius: 50%; margin: 3rem auto 5rem auto; }
 
-.profile_section_con { background: #fbfbfb; }
+.profile_section_con .title_line { display: block; font-size: 2rem; color: #000; padding: 8rem 0rem 5.2rem 0rem; margin: 0rem; text-transform: uppercase; text-align: center; }
 
-.profile_section_con p { display: block; width: 100%; text-align: center; line-height: 2.3rem; margin-top: 3rem; padding-bottom: 8.3rem; }
+.profile_section_con .title_line .carrot { display: block; width: 1.8rem; height: 0.3rem; background-color: #384d9f; font-size: 1.4rem; transform: rotate(45deg); margin: 0rem auto 3rem auto; }
+
+.profile_section_con .title_line strong { display: block; font-weight: 700; font-size: 1.8rem; color: #000; }
+
+.profile_section_con .title_line em { display: block; font-weight: 700; font-size: 1.4rem; margin: 1rem auto 0rem auto; color: #333333; font-style: normal; }
+
+.profile_section_con { background: #f2f2f2; }
+
+.profile_section_con p { display: block; width: 90%; text-align: center; line-height: 3rem; margin: auto; margin-top: 3rem; margin-bottom: 0rem; padding-bottom: 8.3rem; font-size: 1.5rem; }
 
 .profile_section_con p em { display: block; text-align: center; font-style: normal; }
 
-.profile_section_con p em span { display: inline-block; color: #ef4238; font-weight: 700; margin-top: 1rem; margin-right: 1rem; }
+.profile_section_con p em span { display: inline-block; color: #384d9f; font-weight: 700; margin-top: 1rem; margin-right: 1rem; }
 
 .profile_section_con p em span:after { display: inline-block; margin-left: 1rem; content: "·"; }
 

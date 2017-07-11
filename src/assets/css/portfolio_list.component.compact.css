@@ -1,3 +1,4 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /** variables **/
 body { border: 0rem; }
 
@@ -5,7 +6,11 @@ body { border: 0rem; }
 
 .portfolio_list ul li { position: absolute; display: block; float: left; top: 0px; left: 0px; height: auto; overflow: hidden; background: black; }
 
-.portfolio_list ul li img { width: 100%; height: auto; opacity: 0.4; transform: scale(1); transition: transform 2s 0s; }
+.portfolio_list ul li:hover { background: #171f41; }
+
+.portfolio_list ul li a:hover { text-decoration: none; }
+
+.portfolio_list ul li img { width: 100%; height: auto; opacity: 0.35; transform: scale(1); transition: transform 2s 0s; }
 
 .portfolio_list ul li:hover { cursor: pointer; }
 

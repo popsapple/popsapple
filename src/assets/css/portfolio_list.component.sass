@@ -20,11 +20,15 @@ body
     height: auto
     overflow: hidden
     background: black
+    &:hover
+      background: darken($brand-primary, 25%)
+    a:hover
+      text-decoration: none
     img
       display:block
       width: 100%
       height: auto
-      opacity: 0.4
+      opacity: 0.35
       transform: scale(1)
       transition: transform 2s 0s
     &:hover

@@ -43,20 +43,5 @@ export class BaseChartDemoComponent {
 
   public chartHovered(e:any):void {
     this._chart.refresh();
-  }/*
-  public chartClicked(e:any):void {
-    if(e.active[0]){
-      e.active[0]._chart.chart.data.datasets[0].data[0] = 100; //= e.active[0]._chart.chart.data.datasets.slice(0);
-      e.active[0]._chart.chart.data.datasets[0].data[1] = 0;
-      e.active[0]._chart.chart.data.labels[0] = "dose";
-      e.active[0]._chart.chart.data.labels[1] = "dosenot";
-      this._chart.update();
-    }
   }
-
-  public chartHovered(e:any):void {
-    console.log("차트 마우스 오버");
-    this._chart.refresh();
-  }*/
-
 }

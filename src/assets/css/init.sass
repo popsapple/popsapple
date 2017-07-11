@@ -1,3 +1,38 @@
 @import "./../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss"
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 /** variables **/
+@mixin icon_conents_mix($contents,$color,$size)
+  font-family: 'FontAwesome'
+  font-size: $size
+  font-style: normal
+  content: $contents
+  color: $color
+@mixin title_line_mix($font-size,$background-color)
+  .title_line
+    display: block
+    font-size: $font-size
+    color: $gray-base
+    padding: ($font-size*4) 0rem ($font-size*2.6) 0rem
+    margin: 0rem
+    text-transform: uppercase
+    text-align: center
+    .carrot
+      display: block
+      width: ($font-size*0.9)
+      height: ($font-size*0.15)
+      background-color: $background-color
+      font-size: ($font-size*0.7)
+      transform: rotate(45deg)
+      margin: 0rem auto ($font-size*1.5) auto
+    strong
+      display: block
+      font-weight: 700
+      font-size: ($font-size*0.9)
+      color: $gray-base
+    em
+      display: block
+      font-weight: 700
+      font-size: ($font-size*0.7)
+      margin: ($font-size*0.5) auto 0rem auto
+      color: $gray-dark
+      font-style: normal

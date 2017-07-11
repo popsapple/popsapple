@@ -8,6 +8,7 @@ import { PortfolioListComponent } from './portfolio/portfolio_list.component';
 import { PortfolioChartComponent } from './portfolio/portfolio_chart.component';
 import { MainProfileMe } from './main_profile/mainprofile.component';
 import { MainSkillList } from './skill_list/skilllist.component';
+import { CopyrightComponent } from './copyright/copyright.component';
 import { MainSkillListService } from './skill_list/skilllist.service';
 import { BaseChartDemoComponent } from './chart/chart.component';
 import { GnbComponent } from './gnb/gnb.component';
@@ -23,7 +24,8 @@ enableProdMode();
     BaseChartDemoComponent,
     MainProfileMe,
     MainSkillList,
-    MainSkillListService
+    MainSkillListService,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,ChartsModule

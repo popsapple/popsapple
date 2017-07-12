@@ -22,8 +22,8 @@ export class CopyrightMailService {
         //console.log("작업완료");
       });
   }
-  constructor(private sendEmailForm: NgForm, private http?: Http, private testval?: number){
-    // 이렇게 선언하면 세번째 매개변수는 있던 없던 상관없음.
+  constructor(private sendEmailForm: NgForm, private http: Http){
+    // , private testval?: number 이렇게 선언하면 testval 매개변수는 있던 없던 상관없음.
     // 만약 private testval: number = "whatever" 이렇게 선언시 세번째 매개변수의 기본값은 whatever 가 됨
     // 기본값 선언과 ? 는 중첩될 수 없음.
     this.copyrightComponent = new CopyrightComponent(this.http);

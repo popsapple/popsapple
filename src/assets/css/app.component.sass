@@ -10,13 +10,13 @@ html body
   z-index: 11
 html body .btn-default.bg-none
   background-color: transparent
-  border-color: $gray-lighter
-  color: $gray-lighter
-  transition: color 1s 0s, border-color 1s 0s
+  border-color: $brand-white
+  color: $brand-white
+  transition: color 1s 0s, border-color 1s 0s, background-color 1s 0s
   &:hover
-    background-color: transparent
+    background-color: $brand-white
     border-color: $brand-white
-    color: $brand-white
+    color: $gray
 ul li, ol li
   list-style: none
 .blind_item, figcaption
@@ -25,3 +25,6 @@ ul li, ol li
   display: inline-block !important
   overflow: hidden !important
   padding-left: 2px !important
+.main-section
+  background: $brand-white
+  margin-bottom: $copyright-height

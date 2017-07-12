@@ -1,2 +1,23 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /** variables **/
+.copyright_section { position: fixed; bottom: 0; z-index: -1; background: #080b17; color: white; font-size: 1.3rem; line-height: 3rem; width: 100%; height: 30vw; }
+
+.copyright_section > div { display: table !important; height: calc(30vw - 5rem); width: 100%; padding-right: 5% !important; padding-left: 5% !important; margin: auto; }
+
+.copyright_section > div > section { display: table-cell !important; height: calc(30vw - 5rem); vertical-align: middle; float: none; padding: 0rem; }
+
+.copyright_section > div > section ul { padding: 0rem 5%; }
+
+.copyright_section > div > section li { padding: 0rem; }
+
+.copyright_section > div > section li:first-child .item { margin-top: 0rem; }
+
+.copyright_section > div > section li input, .copyright_section > div > section li textarea { display: inline-block; vertical-align: middle; border-radius: 0rem; border: 0rem; padding: 0.7rem; padding-left: 1.4rem; width: 100%; height: 4rem; background: #ffffff; color: #101115; }
+
+.copyright_section > div > section li textarea { height: 10rem; }
+
+.copyright_section > div > section .item { margin-left: 0rem; margin-right: 0rem; padding: 0rem; }
+
+.copyright_section > div > section .item.title { margin-top: 1.5rem; text-transform: uppercase; }
+
+.copyright_section .width-full { width: 100%; height: 5rem; line-height: 5rem; font-size: 1.3rem; text-align: center; background: #10162e; }

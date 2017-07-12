@@ -1,1 +1,59 @@
 @import "./init.sass"
+.copyright_section
+  position: fixed
+  bottom: 0
+  z-index: -1
+  background: darken($brand-primary,36%)
+  color: lighten($brand-primary,80%)
+  font-size: 1.3rem
+  line-height: 3rem
+  width: 100%
+  height: $copyright-height
+  > div
+    display: table !important
+    height: calc(#{$copyright-height} - #{$copyright-copy-height})
+    width: 100%
+    padding-right: 5% !important
+    padding-left: 5% !important
+    margin: auto
+    > section
+      display: table-cell !important
+      height: calc(#{$copyright-height} - #{$copyright-copy-height})
+      vertical-align: middle
+      float: none
+      padding: 0rem
+      ul
+        padding: 0rem 5%
+      li
+        padding: 0rem
+        &:first-child
+          .item
+            margin-top: 0rem
+        input, textarea
+          display: inline-block
+          vertical-align: middle
+          border-radius: 0rem
+          border: 0rem
+          padding: 0.7rem
+          padding-left: 1.4rem;
+          width: 100%
+          height: 4rem
+          background: $brand-white
+          color: darken($gray-dark-primary,20%)
+        textarea
+          height: 10rem
+      .item
+        margin-left: 0rem
+        margin-right: 0rem
+        padding: 0rem
+        &.title
+          margin-top: 1.5rem
+          text-transform: uppercase
+
+  .width-full
+    width: 100%
+    height: $copyright-copy-height
+    line-height: $copyright-copy-height
+    font-size: 1.3rem
+    text-align: center
+    background: darken($brand-primary,30%)

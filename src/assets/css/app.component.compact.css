@@ -2682,10 +2682,12 @@ html body { font-family: "Noto Sans KR", "Roboto", sans-serif; }
 
 .carousel-control { width: 5rem; z-index: 11; }
 
-html body .btn-default.bg-none { background-color: transparent; border-color: #e7e7e7; color: #e7e7e7; transition: color 1s 0s, border-color 1s 0s; }
+html body .btn-default.bg-none { background-color: transparent; border-color: #ffffff; color: #ffffff; transition: color 1s 0s, border-color 1s 0s, background-color 1s 0s; }
 
-html body .btn-default.bg-none:hover { background-color: transparent; border-color: #ffffff; color: #ffffff; }
+html body .btn-default.bg-none:hover { background-color: #ffffff; border-color: #ffffff; color: #555555; }
 
 ul li, ol li { list-style: none; }
 
 .blind_item, figcaption { position: absolute !important; width: 1px !important; display: inline-block !important; overflow: hidden !important; padding-left: 2px !important; }
+
+.main-section { background: #ffffff; margin-bottom: 30vw; }

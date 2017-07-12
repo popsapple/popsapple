@@ -42,8 +42,8 @@
 
 .carousel-caption div div { width: 100%; height: 100%; position: static; bottom: auto; vertical-align: middle; top: 0rem; display: table-cell; color: #ffffff; text-shadow: none; }
 
-.carousel-caption div div h2 { opacity: 1; top: 0rem; font-size: 4rem; font-weight: 700; animation: main_visual 1.5s 0s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+.carousel-caption div div h2 { opacity: 1; top: 0rem; font-size: 4.5rem; font-weight: 700; animation: main_visual 1.5s 0s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
-.item .carousel-caption div div span { display: block; font-size: 1.5rem; font-weight: 300; color: #d0d0d0; opacity: 1; margin-top: 2rem; text-shadow: none; animation: main_visual_span 1.5s 0s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+.item .carousel-caption div div span { display: block; font-size: 1.4rem; font-weight: 700; color: #ffffff; opacity: 1; margin-top: 2.3rem; text-shadow: none; text-transform: uppercase; animation: main_visual_span 1.5s 0s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
 .item .carousel-caption div div span + a { display: inline-block; opacity: 1; margin-top: 3.5rem; animation: main_visual_btn 1.5s 0s cubic-bezier(0.785, 0.135, 0.15, 0.86); }

@@ -1,0 +1,80 @@
+<footer class="copyright_section">
+  <div>
+    <h2 class="blind_item">
+      연락처 및 문의하기
+    </h2>
+    <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <h3 class="blind_item">
+        문의하기
+      </h3>
+      <form #sendEmailForm="ngForm" (ngSubmit)="SubmitContactMail(sendEmailForm)" id="CopyrightContact" novalidate>
+        <ul>
+          <li>
+            <label for="CopyrightContactName" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Name</label>
+            <input id="CopyrightContactName" type="text" name="fromname" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+          </li>
+          <li>
+            <label for="CopyrightContactSubject" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Subject</label>
+            <input id="CopyrightContactSubject" type="text" name="subject" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+          </li>
+          <li>
+            <label for="CopyrightContactEmail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Email</label>
+            <input id="CopyrightContactEmail" name="email" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+          </li>
+          <li>
+            <label for="CopyrightContactMessage" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Message</label>
+            <textarea id="CopyrightContactMessage" name="message" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+            </textarea>
+          </li>
+          <li>
+            <button type="submit">Send Mail</button>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <section id="CopyrightContact" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <h3 class="blind_item">
+        연락처
+      </h3>
+      <ul class="right">
+        <li>
+          <i class="address"></i>
+          <div>
+            <h4 class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              Address
+            </h4>
+            <p class="item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <span>경기도 동두천시 동두천동 우방아이유쉘 301-804</span>
+              <span>25, Gangbyeon-ro 664beon-gil, Dongducheon-si, Gyeonggi-do, Republic of Korea</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="call"></i>
+          <div>
+            <h4 class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              Call Me
+            </h4>
+            <p class="item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              010-2503-9269
+            </p>
+          </div>
+        </li>
+        <li>
+          <i class="mail"></i>
+          <div>
+            <h4 class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              Mail Me
+            </h4>
+            <p class="item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              saysun34@gmail.com
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <section class="width-full">
+    <span>Copyright(c)2002 Hyeon Garam All rights reserved.</span>
+  </section>
+</footer>

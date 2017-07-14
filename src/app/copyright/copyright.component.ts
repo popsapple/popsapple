@@ -38,7 +38,7 @@ export class CopyrightComponent {
   }
   ResponsedDataCheckfun() {
   }
-  constructor(private http: Http){\
+  constructor(private http: Http){
     if(CopyrightComponent._sendEmailForm == undefined){ // 타입스크립트에선 static으로 선언해도 덮어쓰기가 된다... -_- ;;;;
       this.sendEmailForm = new FormGroup({ //FormGroup 을 쓸 때에 반드시 한번은 정의해줘야 하므로....
         fromname: new FormControl(''),

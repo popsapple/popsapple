@@ -7,27 +7,27 @@
       <h3 class="blind_item">
         문의하기
       </h3>
-      <form #sendEmailForm="ngForm" (ngSubmit)="SubmitContactMail(sendEmailForm)" id="CopyrightContact" novalidate>
+      <form [formGroup]="sendEmailForm" #f id="CopyrightContact">
         <ul>
           <li>
             <label for="CopyrightContactName" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Name</label>
-            <input id="CopyrightContactName" type="text" name="fromname" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+            <input id="CopyrightContactName" type="text" name="fromname" formControlName="fromname" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
           </li>
           <li>
             <label for="CopyrightContactSubject" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Subject</label>
-            <input id="CopyrightContactSubject" type="text" name="subject" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+            <input id="CopyrightContactSubject" type="text" name="subject" formControlName="subject" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
           </li>
           <li>
             <label for="CopyrightContactEmail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Email</label>
-            <input id="CopyrightContactEmail" name="email" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+            <input id="CopyrightContactEmail" name="email" type="email" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
           </li>
           <li>
             <label for="CopyrightContactMessage" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Message</label>
-            <textarea id="CopyrightContactMessage" name="message" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+            <textarea id="CopyrightContactMessage" name="message" formControlName="message" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" >
             </textarea>
           </li>
           <li>
-            <button type="submit">Send Mail</button>
+            <button (click)="SubmitContactMail()" class="col-xs-2 btn btn-primary button">Send Mail</button>
           </li>
         </ul>
       </form>
@@ -75,6 +75,6 @@
     </section>
   </div>
   <section class="width-full">
-    <span>Copyright(c)2002 Hyeon Garam All rights reserved.</span>
+    <span>Copyright(c)2017 Hyeon Garam All rights reserved.</span>
   </section>
 </footer>

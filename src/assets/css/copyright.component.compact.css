@@ -1,12 +1,23 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/** bootstrap custermize **/
+html .btn { border: 0px; text-transform: uppercase; }
+
 /** variables **/
-.copyright_section { position: fixed; bottom: 0; z-index: -1; background: #080b17; color: white; font-size: 1.3rem; line-height: 3rem; width: 100%; height: 30vw; }
+.copyright_section { background: #080b17; color: white; font-size: 1.3rem; line-height: 3rem; width: 100%; height: auto; }
 
-.copyright_section > div { display: table !important; height: calc(30vw - 5rem); width: 100%; padding-right: 5% !important; padding-left: 5% !important; margin: auto; }
+@media screen and (min-width: 992px) { .copyright_section { height: 33vw; position: fixed; bottom: 0; z-index: -1; } }
 
-.copyright_section > div > section { display: table-cell !important; height: calc(30vw - 5rem); vertical-align: middle; float: none; padding: 0rem; }
+.copyright_section > div { display: table !important; height: calc(auto - 5rem); width: 100%; padding-right: 5% !important; padding-left: 5% !important; margin: auto; }
 
-.copyright_section > div > section ul { padding: 0rem 5%; }
+@media screen and (min-width: 992px) { .copyright_section > div { height: calc(33vw - 5rem); } }
+
+.copyright_section > div > section { display: table-cell !important; vertical-align: middle; padding: 0rem; float: left !important; }
+
+@media screen and (min-width: 992px) { .copyright_section > div > section { height: calc(33vw - 5rem); margin-left: 3% !important; float: none !important; } }
+
+.copyright_section > div > section + section { padding-top: 2rem; }
+
+.copyright_section > div > section ul { padding: 0rem 2.5%; }
 
 .copyright_section > div > section li { padding: 0rem; }
 
@@ -19,5 +30,7 @@
 .copyright_section > div > section .item { margin-left: 0rem; margin-right: 0rem; padding: 0rem; }
 
 .copyright_section > div > section .item.title { margin-top: 1.5rem; text-transform: uppercase; }
+
+.copyright_section > div > section .btn { margin-top: 1rem; }
 
 .copyright_section .width-full { width: 100%; height: 5rem; line-height: 5rem; font-size: 1.3rem; text-align: center; background: #10162e; }

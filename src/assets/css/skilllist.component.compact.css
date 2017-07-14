@@ -1,9 +1,14 @@
 @charset "UTF-8";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/** bootstrap custermize **/
+html .btn { border: 0px; }
+
 /** variables **/
 .sikllchart { margin: 4rem auto 4rem auto; text-align: center; display: table !important; padding-right: 5% !important; padding-left: 5% !important; }
 
 .sikllchart > div { display: table-cell !important; }
+
+.siklllist_section { padding: 0rem; }
 
 .siklllist_section > div { width: 90%; padding: 2rem; padding-top: 3.5rem; margin: auto; margin-bottom: 2rem; background: #ffffff; border: 1px solid #e7e7e7; line-height: 3rem; font-size: 1.5rem; }
 

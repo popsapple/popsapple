@@ -1,7 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { NgForm, FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Http } from '@angular/http';
-import { CopyrightMailService } from './copyright_mail.service';
+import { Observable } from 'rxjs/Observable';
+import { CopyrightMailService, EmailData } from './copyright_mail.service';
 import { LoadTemplateScript } from '../loadjs/loadscript.service';
 @Component({
   selector: 'copyright-item',
@@ -10,7 +11,6 @@ import { LoadTemplateScript } from '../loadjs/loadscript.service';
   providers: [LoadTemplateScript,CopyrightMailService]
 })
 export class CopyrightComponent {
-  ResponsedDataCheck: Object;
   ResponsedDataPrint: Object;
   sendEmailForm: FormGroup;
   static _sendEmailForm: FormGroup;
@@ -34,10 +34,15 @@ export class CopyrightComponent {
       return false;
     }
   }
-  ResponsedDataPrintfun() {
-  }
-  ResponsedDataCheckfun() {
-  }
+
+  ResponsedDataCheck(responsed_data:EmailData):Observable<any> {
+    alert(responsed_data.message);
+    return Observable.create(observer => {
+      //observer.next(this._people); 다음 작업을 이어서 진행할 때
+      observer.complete();
+   });
+  };
+
   constructor(private http: Http){
     if(CopyrightComponent._sendEmailForm == undefined){ // 타입스크립트에선 static으로 선언해도 덮어쓰기가 된다... -_- ;;;;
       this.sendEmailForm = new FormGroup({ //FormGroup 을 쓸 때에 반드시 한번은 정의해줘야 하므로....
@@ -48,8 +53,6 @@ export class CopyrightComponent {
       });
       CopyrightComponent._sendEmailForm = this.sendEmailForm;
     }
-    this.ResponsedDataCheck = () => {};
-    this.ResponsedDataCheck = () => {};
   }
 }
 

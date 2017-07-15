@@ -58,9 +58,24 @@
         &.title
           margin-top: 1.5rem
           text-transform: uppercase
+        &.right
+          margin-top: 0.2rem
+          margin-bottom: 1rem
       .btn
         margin-top: 1rem
-
+      i
+        display: block
+        &:after
+          display: block
+        &.address:after
+          @include icon_conents_mix('\f041',#ffffff,2rem)
+          margin-top: 0rem
+        &.call:after
+          @include icon_conents_mix('\f095',#ffffff,2rem)
+          margin-top: 1rem
+        &.mail:after
+          @include icon_conents_mix('\f0e0',#ffffff,2rem)
+          margin-top: 1rem
   .width-full
     width: 100%
     height: $copyright-copy-height

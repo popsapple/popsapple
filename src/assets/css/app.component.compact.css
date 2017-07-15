@@ -2678,14 +2678,14 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 @media print { .hidden-print { display: none !important; } }
 
 /** bootstrap custermize **/
-html .btn { border: 0px; }
+html .btn { border: 0px; text-transform: uppercase; }
 
 /** variables **/
 html body { font-family: "Noto Sans KR", "Roboto", sans-serif; }
 
 .carousel-control { width: 5rem; z-index: 11; }
 
-html body .btn-default.bg-none { background-color: transparent; border-color: #ffffff; color: #ffffff; transition: color 1s 0s, border-color 1s 0s, background-color 1s 0s; }
+html body .btn-default.bg-none { background-color: transparent; border: 1px solid #ffffff; color: #ffffff; outline: none; transition: color 1s 0s, border-color 1s 0s, background-color 1s 0s; }
 
 html body .btn-default.bg-none:hover { background-color: #ffffff; border-color: #ffffff; color: #555555; }
 

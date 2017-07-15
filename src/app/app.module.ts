@@ -18,6 +18,8 @@ import { GnbComponent } from './gnb/gnb.component';
 import { MainSkillListService } from './skill_list/skilllist.service';
 import { CopyrightMailService } from './copyright/copyright_mail.service';
 
+import { ScrollPointCheckDirective } from './scrollpoint_ele/scrollpoint.directive';
+
 enableProdMode();
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ enableProdMode();
     MainProfileMe,
     MainSkillList,
     MainSkillListService,
-    CopyrightComponent
+    CopyrightComponent,
+    ScrollPointCheckDirective
   ],
   imports: [
     BrowserModule,ChartsModule,FormsModule,HttpModule,ReactiveFormsModule

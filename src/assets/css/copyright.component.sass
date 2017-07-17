@@ -11,6 +11,8 @@
     position: fixed
     bottom: 0
     z-index: -1
+  @media screen and (min-width: $screen-lg-min)
+    height: $copyright-lg-height
   > div
     display: table !important
     height: calc(#{$copyright-height} - #{$copyright-copy-height})
@@ -20,6 +22,8 @@
     margin: auto
     @media screen and (min-width: $screen-md-min)
       height: calc(#{$copyright-md-height} - #{$copyright-copy-height})
+    @media screen and (min-width: $screen-lg-min)
+      height: calc(#{$copyright-lg-height} - #{$copyright-copy-height})
     > section
       display: table-cell !important
       vertical-align: middle
@@ -29,6 +33,8 @@
         height: calc(#{$copyright-md-height} - #{$copyright-copy-height})
         margin-left: 3% !important
         float: none !important
+      @media screen and (min-width: $screen-lg-min)
+        height: calc(#{$copyright-lg-height} - #{$copyright-copy-height})
       &+section
         padding-top: 2rem
       ul

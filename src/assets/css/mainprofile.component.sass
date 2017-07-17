@@ -40,3 +40,26 @@ ul.profile_img
           margin-right: 0rem
         &:last-child:after
           display: none
+.profile_section_con
+  > ul
+    li
+      opacity: 0
+      transform: rotateY(0deg)
+      transition: opacity 0.5s, transform 0.5s ease-in 0s
+  p
+    opacity: 0
+    transition: opacity 0.8s ease-in 2s
+  &.scroll_active
+    > ul
+      li
+        opacity: 1
+        transform: rotateY(360deg)
+        transition: opacity 0.5s, transform 0.5s ease-in 0s
+        &+li
+          transition: opacity 0.5s, transform 0.5s ease-in 0.5s
+        &+li+li
+          transition: opacity 0.5s, transform 0.5s ease-in 1s
+        &+li+li+li
+          transition: opacity 0.5s, transform 0.5s ease-in 1.5s
+    p
+      opacity: 1

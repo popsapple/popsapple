@@ -15,7 +15,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot -prod",
+    "mongoose" : "4.11.3",
+    "mongodb" : "2.2.30"
   },
   "private": true,
   "dependencies": {
@@ -37,7 +39,9 @@
     "body-parser": "^1.17.2",
     "request": "^2.81.0",
     "nodemailer": "^4.0.1",
-    "express-body-parser-json-error": "0.1.0"
+    "express-body-parser-json-error": "0.1.0",
+    "xmlbuilder" : "9.0.1",
+    "dateformat" : "2.0.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /** bootstrap custermize **/
-html .btn { border: 0px; }
+html .btn { border: 0px; text-transform: uppercase; }
 
 /** variables **/
 .sikllchart { margin: 4rem auto 4rem auto; text-align: center; display: table !important; padding-right: 5% !important; padding-left: 5% !important; }
@@ -31,3 +31,13 @@ html .btn { border: 0px; }
 .siklllist_section_con .title_line em { display: block; font-weight: 700; font-size: 1.4rem; margin: 1rem auto 0rem auto; color: #333333; font-style: normal; }
 
 .siklllist_section_con .siklllist_section .title_line { padding-top: 2.6rem; padding-bottom: 3rem; }
+
+.siklllist_section_con .siklllist_section { position: relative; margin-top: -8rem; opacity: 0; transition: opacity 0.5s, margin-top 0.5s ease-in 0s; }
+
+.siklllist_section_con.scroll_active .siklllist_section { opacity: 1; margin-top: 0rem; transition: opacity 1s, margin-top 0.3s ease-out 0s; }
+
+.siklllist_section_con.scroll_active .siklllist_section + section { transition: opacity 1s, margin-top 0.3s ease-out 0.5s; }
+
+.siklllist_section_con.scroll_active .siklllist_section + section + section { transition: opacity 1s, margin-top 0.3s ease-out 1s; }
+
+.siklllist_section_con.scroll_active .siklllist_section + section + section + section { transition: opacity 1s, margin-top 0.3s ease-out 1.5s; }

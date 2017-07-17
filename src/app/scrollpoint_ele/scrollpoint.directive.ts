@@ -1,4 +1,4 @@
-import { Directive, HostListener, ViewChild, AfterViewInit, ElementRef, Renderer } from '@angular/core';
+import { Directive, HostListener, ViewChild, ElementRef, Renderer } from '@angular/core';
 @Directive({
   selector: '[scroll-check]'
 })
@@ -8,7 +8,7 @@ export class ScrollPointCheckDirective {
   window_top:number;
   class_list:string;
   constructor(private _el:ElementRef,private renderer:Renderer){
-    this.active_class = "scroll_active";
+    this.active_class;
     this.offset_top = 0;
   }
   //@HostListener('click', ['$event'])
@@ -19,7 +19,7 @@ export class ScrollPointCheckDirective {
     this.window_top = $event.currentTarget.scrollY || $event.currentTarget.pageYOffset;
     this.class_list = this._el.nativeElement.getAttribute('class');
     if(this.active_class == undefined){
-      this.active_class = this.class_list+" scroll_none";
+      this.active_class = this.class_list+" scroll_active";
     }
     if(this.window_top > (this.offset_top-(this.offset_top/5))){
       this.renderer.setElementAttribute(this._el.nativeElement, 'class', this.active_class);

@@ -4,8 +4,12 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { enableProdMode } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
+import { AdminSideModule } from './admin/admin.module';
+import { RouterModule } from '@angular/router';
+import { routing } from './app.routes';
 
-import { MainVisualComponent } from './app.component';
+import { MainPageComponent } from './app.component';
+import { MainVisualComponent } from './main_page/main_page.component';
 import { LoadingElement } from './app_loading.directive';
 import { MainVisualItemComponent } from './main_visual/mainvisual.component';
 import { PortfolioListComponent } from './portfolio/portfolio_list.component';
@@ -37,12 +41,20 @@ enableProdMode();
     MainSkillList,
     MainSkillListService,
     CopyrightComponent,
+    MainPageComponent,
     ScrollPointCheckDirective
   ],
   imports: [
-    BrowserModule,ChartsModule,FormsModule,HttpModule,ReactiveFormsModule
+    BrowserModule,
+    ChartsModule,
+    FormsModule,
+    HttpModule,
+    ReactiveFormsModule,
+    AdminSideModule,
+    RouterModule,
+    routing
   ],
   providers: [CopyrightMailService],
-  bootstrap: [MainVisualComponent]
+  bootstrap: [MainPageComponent]
 })
 export class AppModule { }

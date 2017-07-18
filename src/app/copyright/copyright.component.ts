@@ -10,7 +10,7 @@ import { LoadTemplateScript } from '../loadjs/loadscript.service';
   styleUrls: ['./../../assets/css/copyright.component.compact.css'],
   providers: [LoadTemplateScript,CopyrightMailService]
 })
-export class CopyrightComponent {
+export class CopyrightComponent implements OnInit{
   ResponsedDataPrint: Object;
   sendEmailForm: FormGroup;
   static _sendEmailForm: FormGroup;
@@ -44,15 +44,17 @@ export class CopyrightComponent {
   };
 
   constructor(private http: Http){
-    if(CopyrightComponent._sendEmailForm == undefined){ // 타입스크립트에선 static으로 선언해도 덮어쓰기가 된다... -_- ;;;;
-      this.sendEmailForm = new FormGroup({ //FormGroup 을 쓸 때에 반드시 한번은 정의해줘야 하므로....
-        fromname: new FormControl(''),
-        subject: new FormControl(''),
-        email: new FormControl(''),
-        message: new FormControl('')
-      });
-      CopyrightComponent._sendEmailForm = this.sendEmailForm;
-    }
+    
+  }
+
+  ngOnInit(){
+    this.sendEmailForm = new FormGroup({ //FormGroup 을 쓸 때에 반드시 한번은 정의해줘야 하므로....
+      fromname: new FormControl(''),
+      subject: new FormControl(''),
+      email: new FormControl(''),
+      message: new FormControl('')
+    });
+    CopyrightComponent._sendEmailForm = this.sendEmailForm;
   }
 }
 

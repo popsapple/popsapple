@@ -2701,9 +2701,9 @@ ul li, ol li { list-style: none; }
 
 .main-section { background: #ffffff; margin: 0rem; padding: 0rem; margin-bottom: auto; }
 
-@media screen and (min-width: 992px) { .main-section { margin-bottom: 53vw; } }
+@media screen and (min-width: 992px) { .main-section { margin-bottom: 58vw; } }
 
-@media screen and (min-width: 1200px) { .main-section { margin-bottom: 33vw; } }
+@media screen and (min-width: 1200px) { .main-section { margin-bottom: 40vw; } }
 
 .loading_div { position: fixed; z-index: 20; top: 0rem; background: #ffffff; width: 100vw; height: 100vh; display: block; font-size: 0px; }
 

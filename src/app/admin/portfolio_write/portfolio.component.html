@@ -1,0 +1,40 @@
+<loading-item></loading-item>
+<section class="section">
+  <form [formGroup]="WritePortfolio" #f2 >
+    <ul>
+      <li>
+        <label for="WritePortfolioUrl" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Url</label>
+        <input id="WritePortfolioUrl" type="text" name="url" formControlName="url" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+      </li>
+      <li>
+        <label for="WritePortfolioThumbnail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Thumnail</label>
+        <input id="WritePortfolioThumbnail" type="hidden" name="thumnail_file" formControlName="thumnail_file" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+        <input id="WritePortfolioThumbnail" type="file" name="thumnail" formControlName="thumnail" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+      </li>
+      <li>
+        <label for="WritePortfolioTitle" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Subject</label>
+        <input id="WritePortfolioTitle" name="text" type="title" formControlName="title" ngModel class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+      </li>
+      <li>
+        <label for="WritePortfolioDes" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Des Point</label>
+        <input id="WritePortfolioDes" type="text" name="des_percent" formControlName="des_percent" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+      </li>
+      <li>
+        <label for="WritePortfolioPubl" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Publ Point</label>
+        <input id="WritePortfolioPubl" type="text" name="publ_percent" formControlName="publ_percent" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+      </li>
+      <li>
+        <label for="WritePortfolioDev" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Dev Point</label>
+        <input id="WritePortfolioDev" type="text" name="dev_percent" formControlName="dev_percent" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+      </li>
+      <li>
+        <label for="WritePortfolioDesc" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Desc</label>
+        <textarea id="WritePortfolioDesc" type="text" name="desc" formControlName="desc" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12"></textarea>
+      </li>
+      <li>
+        <button (click)="SubmitPortfolioPost()" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 btn btn-primary button">Posting</button>
+      </li>
+    </ul>
+  </form>
+  <a routerLink="./list">포트폴리오 리스트</a>
+</section>

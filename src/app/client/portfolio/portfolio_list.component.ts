@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { LoadTemplateScript } from '../loadjs/loadscript.service';
+import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 //import { CopyrightComponent } from './copyright.component';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'portfolio-list',
   templateUrl: './portfolio_list.component.html',
-  styleUrls: ['./../../assets/css/portfolio_list.component.compact.css'],
+  styleUrls: ['./../../../assets/css/portfolio_list.component.compact.css'],
   providers: [LoadTemplateScript]
 })
 export class PortfolioListComponent implements OnInit {

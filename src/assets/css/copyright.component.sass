@@ -17,10 +17,13 @@
     display: table !important
     height: calc(#{$copyright-height} - #{$copyright-copy-height})
     width: 100%
+    padding: 2rem 0rem
     padding-right: 5% !important
     padding-left: 5% !important
     margin: auto
     @media screen and (min-width: $screen-md-min)
+      padding-top: 0rem
+      padding-bottom: 0rem
       height: calc(#{$copyright-md-height} - #{$copyright-copy-height})
     @media screen and (min-width: $screen-lg-min)
       height: calc(#{$copyright-lg-height} - #{$copyright-copy-height})

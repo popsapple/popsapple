@@ -3,7 +3,7 @@ import { BaseChartDirective } from 'ng2-charts';
 @Component({
 selector: 'base-chart',
 templateUrl: './chart-component.html',
-styleUrls: ['./../../assets/css/portfolio_chart.component.compact.css']
+styleUrls: ['./../../../assets/css/portfolio_chart.component.compact.css']
 })
 export class BaseChartDemoComponent {
   @ViewChild(BaseChartDirective) public _chart;

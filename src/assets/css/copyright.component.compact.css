@@ -3,24 +3,26 @@
 /** bootstrap custermize **/
 html .btn { border: 0px; text-transform: uppercase; }
 
+section, .section { margin: 0rem; padding: 0rem; display: block; }
+
 /** variables **/
 .copyright_section { background: #080b17; color: white; font-size: 1.3rem; line-height: 3rem; width: 100%; height: auto; }
 
-@media screen and (min-width: 992px) { .copyright_section { height: 53vw; position: fixed; bottom: 0; z-index: -1; } }
+@media screen and (min-width: 992px) { .copyright_section { height: 58vw; position: fixed; bottom: 0; z-index: -1; } }
 
-@media screen and (min-width: 1200px) { .copyright_section { height: 33vw; } }
+@media screen and (min-width: 1200px) { .copyright_section { height: 40vw; } }
 
-.copyright_section > div { display: table !important; height: calc(auto - 5rem); width: 100%; padding-right: 5% !important; padding-left: 5% !important; margin: auto; }
+.copyright_section > div { display: table !important; height: calc(auto - 5rem); width: 100%; padding: 2rem 0rem; padding-right: 5% !important; padding-left: 5% !important; margin: auto; }
 
-@media screen and (min-width: 992px) { .copyright_section > div { height: calc(53vw - 5rem); } }
+@media screen and (min-width: 992px) { .copyright_section > div { padding-top: 0rem; padding-bottom: 0rem; height: calc(58vw - 5rem); } }
 
-@media screen and (min-width: 1200px) { .copyright_section > div { height: calc(33vw - 5rem); } }
+@media screen and (min-width: 1200px) { .copyright_section > div { height: calc(40vw - 5rem); } }
 
 .copyright_section > div > section { display: table-cell !important; vertical-align: middle; padding: 0rem; float: left !important; }
 
-@media screen and (min-width: 992px) { .copyright_section > div > section { height: calc(53vw - 5rem); margin-left: 3% !important; float: none !important; } }
+@media screen and (min-width: 992px) { .copyright_section > div > section { height: calc(58vw - 5rem); margin-left: 3% !important; float: none !important; } }
 
-@media screen and (min-width: 1200px) { .copyright_section > div > section { height: calc(33vw - 5rem); } }
+@media screen and (min-width: 1200px) { .copyright_section > div > section { height: calc(40vw - 5rem); } }
 
 .copyright_section > div > section + section { padding-top: 2rem; }
 

@@ -1,4 +1,9 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/** bootstrap custermize **/
+html .btn { border: 0px; text-transform: uppercase; }
+
+section, .section { margin: 0rem; padding: 0rem; display: block; }
+
 /** variables **/
 .navbar { position: fixed; top: 0; z-index: 12; width: 100%; background: url(./../image/transparent.png); border: 0rem; margin-bottom: 0rem; }
 

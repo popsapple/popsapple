@@ -1,0 +1,32 @@
+<loading-item></loading-item>
+<section class="portfolio_list">
+  <ng-container *ngIf="portfolio">
+    <ul>
+      <li *ngFor="let item of portfolio.portfolio_list; let i=index;">
+        <section class="portfolio_info">
+          <div class="top">
+             <a [routerLink]="['/admin/portfolio_write',{post_index: item.post_index}]"class="figure" target="_blank">
+                <div class="table">
+                <div class="cell">
+                  <h3>{{item.title}} {{item.post_index}}</h3>
+                  <div>
+                    <strong>{{item.des_percent}}</strong>
+                    <strong>{{item.publ_percent}}</strong>
+                    <strong>{{item.dev_percent}}</strong>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <figure>
+            <picture>
+              <img [src]="item.thumnail" [alt]="item.title">
+            </picture>
+            <figcaption class="blind">{{item.title}}</figcaption>
+          </figure>
+        </section>
+      </li>
+    </ul>
+    <a routerLink="/admin/portfolio_write">포트폴리오 쓰기</a>
+  </ng-container>
+</section>

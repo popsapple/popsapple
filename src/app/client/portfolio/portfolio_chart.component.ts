@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LoadTemplateScript } from '../loadjs/loadscript.service';
+import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 @Component({
   selector: 'chart-parent',
   templateUrl: './portfolio_chart.component.html',

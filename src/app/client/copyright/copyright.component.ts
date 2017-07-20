@@ -3,11 +3,11 @@ import { NgForm, FormGroup, FormControl, FormBuilder, Validators, AbstractContro
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { CopyrightMailService, EmailData } from './copyright_mail.service';
-import { LoadTemplateScript } from '../loadjs/loadscript.service';
+import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 @Component({
   selector: 'copyright-item',
   templateUrl: './copyright.component.html',
-  styleUrls: ['./../../assets/css/copyright.component.compact.css'],
+  styleUrls: ['./../../../assets/css/copyright.component.compact.css'],
   providers: [LoadTemplateScript,CopyrightMailService]
 })
 export class CopyrightComponent implements OnInit{
@@ -44,7 +44,7 @@ export class CopyrightComponent implements OnInit{
   };
 
   constructor(private http: Http){
-    
+
   }
 
   ngOnInit(){

@@ -1,10 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 import { MainVisualService } from '../main_visual/mainvisual.service';
-import { LoadTemplateScript } from '../loadjs/loadscript.service';
+import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 @Component({
   selector: 'visual-item',
   templateUrl: './mainvisualitem.component.html',
-  styleUrls: ['./../../assets/css/mainvisual.component.compact.css'],
+  styleUrls: ['./../../../assets/css/mainvisual.component.compact.css'],
   providers: [MainVisualService,LoadTemplateScript]
 })
 export class MainVisualItemComponent implements OnInit {

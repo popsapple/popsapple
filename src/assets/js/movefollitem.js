@@ -123,23 +123,23 @@ $.fn.onMovingFllowingItem = function(options){
     });
   }
 
-  if(obj.find("img").length != 0){
-    var img = new Image();
-    var img_src;
-    obj.each(function(index){
-      if($(this).find("img")){
-        img_src = $(this).find("img").attr("src");
-      }
-    });
-    img.src = img_src;
-    img.onload = function(){
+  var img = new Image();
+  var img_src;
+  obj.each(function(index){
+    if($(this).find("img").attr("src") != ''){
+      img_src = $(this).find("img").attr("src");
+      img.src = img_src;
+      img.onload = function(){
+        setTimeout(function(){
+        },1);
+      };
+    }
+    if(index == obj.length-1){
       setTimeout(function(){
         obj.check_item_width();
-      },1000);
-    };
-  }else{
-    obj.check_item_width();
-  }
+      },500);
+    }
+  });
 
   $(window).resize(function(){
     window_width = viewport().width;
@@ -147,13 +147,6 @@ $.fn.onMovingFllowingItem = function(options){
   });
 };
 
-$(document).ready(function() {
-  if($(".portfolio_list > ul > li")){
-    img = new Image();
-    img.src = $(".portfolio_list > ul > li").eq($(".portfolio_list > ul > li").length-1).find("img").attr("src");
-    img.onload = function(){
-      console.log("이미지 전부 로드됨");
-      $(".portfolio_list > ul > li").onMovingFllowingItem();
-    };
-  }
-});
+if($(".portfolio_list > ul > li")){
+  $(".portfolio_list > ul > li").onMovingFllowingItem();
+}

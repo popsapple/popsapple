@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, Inject } from '@angular/core';
-import { LoadTemplateScript } from '../loadjs/loadscript.service';
+import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 import { Directive, HostListener, ViewChild, ElementRef, Renderer } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 declare var $: any;
@@ -8,6 +8,7 @@ declare var $: any;
 })
 export class MenuItemDirective implements AfterViewInit {
   targetname: string;
+  targettag: string;
   targetposition: number;
   current_target: any;
   constructor(@Inject(DOCUMENT) private document: any,private _el:ElementRef,private renderer:Renderer){
@@ -23,19 +24,22 @@ export class MenuItemDirective implements AfterViewInit {
       position = $("body").height();
     }
     $("html, body").animate({ scrollTop: position }, 500);
-    $(".gnb-toggle-btn").click();
+    if(this.targettag != 'anchor'){
+      $(".gnb-toggle-btn").click();
+    }
     this.current_target.focus();
   }
 
   ngAfterViewInit(){
     this.targetname = this._el.nativeElement.getAttribute('data-targeting');
+    this.targettag = this._el.nativeElement.getAttribute('data-targettag');
   }
 
 }
 @Component({
   selector: 'gnb',
   templateUrl: './gnb.component.html',
-  styleUrls: ['./../../assets/css/gnb.component.compact.css'],
+  styleUrls: ['./../../../assets/css/gnb.component.compact.css'],
   providers: [LoadTemplateScript]
 })
 export class GnbComponent {

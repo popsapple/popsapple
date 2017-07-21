@@ -25,7 +25,7 @@ export class PortfolioPostComponent implements OnInit{
   }
 
   SubmitPortfolioThumbnail(file_data:any) {
-    this.file_data = file_data;
+    PortfolioPostComponent.file_data = file_data;
     console.log("클라이언트 업로드 SETP01 :: "+PortfolioPostComponent.file_data);
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend();
   }

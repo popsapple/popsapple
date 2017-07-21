@@ -7,13 +7,15 @@ import { AdminSideModule } from './admin/admin.module';
 import { ClientSideModule } from './client/client.module';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routes';
+import { NgUploaderModule } from 'ngx-uploader';
 
 import { MainPageComponent } from './app.component';
 
 enableProdMode();
 @NgModule({
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    NgUploaderModule
   ],
   imports: [
     BrowserModule,

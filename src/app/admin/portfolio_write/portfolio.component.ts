@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { NgForm, FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { NgForm, FormGroup, FormControl, FormBuilder, Input, Validators, AbstractControl } from '@angular/forms';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostService, PortfolioListData } from './portfolio_post.service';
@@ -18,15 +18,13 @@ export class PortfolioPostComponent implements OnInit{
 
   static _WritePortfolio: FormGroup;
   static post_index: any;
-  static file_data: any;
 
   SubmitPortfolioPost() {
     this.PortfolioPostService_.SubmitPortfolioPostSend();
   }
 
-  SubmitPortfolioThumbnail(file_data:any) {
-    PortfolioPostComponent.file_data = file_data;
-    console.log("클라이언트 업로드 SETP01 :: "+PortfolioPostComponent.file_data);
+  SubmitPortfolioThumbnail() {
+    console.log("클라이언트 업로드 SETP01");
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend();
   }
 
@@ -51,9 +49,6 @@ export class PortfolioPostComponent implements OnInit{
   };
 
   ThumfileUpload(responsed_data:String):Observable<any> {
-    var thumnail_val = PortfolioPostComponent.file_data.value.replace(/\"/gi, "").replace(/\'/gi, "");
-    console.log("thumnail_file ::"+thumnail_val);
-    PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(thumnail_val,{});
     alert(responsed_data);
     return Observable.create(observer => {
       observer.complete();

@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
-import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
+import { NgForm, FormGroup, Input, ElementRef, FormControl, Validators, ViewChild } from '@angular/forms';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostComponent } from './portfolio.component';
+import { FileUploader } from 'ng2-file-upload';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 //Observable
 @Injectable()
 export class PortfolioPostService {
   public PortfolioPostComponent: PortfolioPostComponent;
-      // put - > '/upload_thumnail'
+  @Input() multiple: boolean = false;
+  @ViewChild('thumnail') inputEl: ElementRef;
+
   public SubmitPortfolioPostSend() {
     let that = this;
     let headers = new Headers({'Content-Type': 'application/json'});
@@ -25,17 +28,25 @@ export class PortfolioPostService {
   public SubmitPortfolioThumbnailSend() {
     let that = this;
     let headers = new Headers({'Content-Type': 'multipart/form-data'});
-    console.log("클라이언트 업로드 SETP02 :: "+PortfolioPostComponent.file_data);
+    console.log("클라이언트 업로드 SETP02 :: ");
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
-    this.http.put('/upload_thumnail',{}).subscribe(
-      data => {
-        console.log("클라이언트 업로드 SETP03");
-        this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
-        });
-      },error => {
-        alert('다시 전송해주세요. :: '+error);
-      },() => {
+    let inputEl: HTMLInputElement = this.inputEl.nativeElement;
+    let fileCount: number = inputEl.files.length;
+    let formData = new FormData();
+    if (fileCount > 0) { // a file was selected
+      for (let i = 0; i < fileCount; i++) {
+          formData.append('file[]', inputEl.files.item(i));
+      }
+      this.http.put('/upload_thumnail', formData).subscribe(
+        data => {
+          console.log("클라이언트 업로드 SETP03");
+          this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
+          });
+        },error => {
+          alert('다시 전송해주세요. :: '+error);
+        },() => {
       });
+    }
   }
   public getPortfolioPostValue() {
     let that = this;

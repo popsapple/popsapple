@@ -52,6 +52,9 @@ export class PortfolioPostComponent implements OnInit{
     console.log("thumnail_file ::"+thumnail_val);
     PortfolioPostComponent._WritePortfolio.get("thumnail").setValue(thumnail_val,{});
     alert(responsed_data);
+    return Observable.create(observer => {
+      observer.complete();
+    });
   }
 
   constructor(private http: Http, private route?: ActivatedRoute, private router?: Router){

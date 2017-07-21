@@ -9,7 +9,7 @@
       <li>
         <label for="WritePortfolioThumbnail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Thumnail</label>
         <input id="WritePortfolioThumbnail" type="hidden" name="thumnail_file" formControlName="thumnail_file" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
-        <input id="WritePortfolioThumbnail" type="file" name="thumnail" formControlName="thumnail" #thumnail (change)="SubmitPortfolioThumbnail(thumnail.files[0])" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+        <input id="WritePortfolioThumbnail" type="file" name="thumnail" formControlName="thumnail" multiple="true" #thumnail (change)="SubmitPortfolioThumbnail(thumnail.files[0])" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
       </li>
       <li>
         <label for="WritePortfolioTitle" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Subject</label>

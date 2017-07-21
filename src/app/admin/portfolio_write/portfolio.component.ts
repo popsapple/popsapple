@@ -49,7 +49,7 @@ export class PortfolioPostComponent implements OnInit{
   };
 
   ThumfileUpload(responsed_data:String):Observable<any> {
-    var thumnail_val = PortfolioPostComponent._WritePortfolio.get("thumnail").value.replace(/\"/gi, "").replace(/\'/gi, "");
+    var thumnail_val = PortfolioPostComponent._WritePortfolio.get("thumnail").files[0].replace(/\"/gi, "").replace(/\'/gi, "");
     console.log("thumnail_file ::"+thumnail_val);
     PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(thumnail_val,{});
     alert(responsed_data);

@@ -25,9 +25,9 @@ export class PortfolioPostService {
   public SubmitPortfolioThumbnailSend() {
     let that = this;
     let headers = new Headers({'Content-Type': 'multipart/form-data'});
-    console.log("클라이언트 업로드 SETP02");
+    console.log("클라이언트 업로드 SETP02 :: "+PortfolioPostComponent._WritePortfolio.get("thumnail").files[0]);
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
-    this.http.put('/upload_thumnail',PortfolioPostComponent._WritePortfolio.get("thumnail").value).subscribe(
+    this.http.put('/upload_thumnail',PortfolioPostComponent._WritePortfolio.get("thumnail").files[0]).subscribe(
       data => {
         console.log("클라이언트 업로드 SETP03");
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {

@@ -1,5 +1,5 @@
-import { Component, OnInit} from '@angular/core';
-import { NgForm, FormGroup, FormControl, FormBuilder, Input, Validators, AbstractControl } from '@angular/forms';
+import { Component, OnInit, Input} from '@angular/core';
+import { NgForm, FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostService, PortfolioListData } from './portfolio_post.service';

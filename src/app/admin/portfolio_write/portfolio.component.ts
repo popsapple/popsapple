@@ -18,13 +18,15 @@ export class PortfolioPostComponent implements OnInit{
 
   static _WritePortfolio: FormGroup;
   static post_index: any;
+  static file_data: any;
 
   SubmitPortfolioPost() {
     this.PortfolioPostService_.SubmitPortfolioPostSend();
   }
 
-  SubmitPortfolioThumbnail() {
-    console.log("클라이언트 업로드 SETP01");
+  SubmitPortfolioThumbnail(file_data:any) {
+    this.file_data = file_data;
+    console.log("클라이언트 업로드 SETP01 :: "+PortfolioPostComponent.file_data);
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend();
   }
 
@@ -49,7 +51,7 @@ export class PortfolioPostComponent implements OnInit{
   };
 
   ThumfileUpload(responsed_data:String):Observable<any> {
-    var thumnail_val = PortfolioPostComponent._WritePortfolio.get("thumnail").files[0].replace(/\"/gi, "").replace(/\'/gi, "");
+    var thumnail_val = PortfolioPostComponent.file_data.replace(/\"/gi, "").replace(/\'/gi, "");
     console.log("thumnail_file ::"+thumnail_val);
     PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(thumnail_val,{});
     alert(responsed_data);

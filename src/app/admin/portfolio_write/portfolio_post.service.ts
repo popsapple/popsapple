@@ -9,12 +9,25 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PortfolioPostService {
   public PortfolioPostComponent: PortfolioPostComponent;
+      // put - > '/upload_thumnail'
   public SubmitPortfolioPostSend() {
     let that = this;
     let headers = new Headers({'Content-Type': 'application/json'});
     this.http.put('/portfolio_post_put',JSON.stringify(PortfolioPostComponent._WritePortfolio.value),{'headers': headers}).subscribe(
       data => {
         this.PortfolioPostComponent.ResponsedDataCheck(data.json().message).subscribe(():void => {
+        });
+      },error => {
+        alert('다시 전송해주세요.');
+      },() => {
+      });
+  }
+  public SubmitPortfolioThumbnailSend() {
+    let that = this;
+    let headers = new Headers({'Content-Type': 'multipart/form-data'});
+    this.http.put('/upload_thumnail',PortfolioPostComponent._WritePortfolio.get("thumnail_file").value,{'headers': headers}).subscribe(
+      data => {
+        this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });
       },error => {
         alert('다시 전송해주세요.');

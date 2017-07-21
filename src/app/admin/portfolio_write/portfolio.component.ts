@@ -23,6 +23,10 @@ export class PortfolioPostComponent implements OnInit{
     this.PortfolioPostService_.SubmitPortfolioPostSend();
   }
 
+  SubmitPortfolioThumbnail() {
+    this.PortfolioPostService_.SubmitPortfolioThumbnailSend();
+  }
+
   ResponsedDataCheck(responsed_data:String):Observable<any> {
     alert(responsed_data);
     return Observable.create(observer => {
@@ -42,6 +46,13 @@ export class PortfolioPostComponent implements OnInit{
       observer.complete();
    });
   };
+
+  ThumfileUpload(responsed_data:String):Observable<any> {
+    var thumnail_val = PortfolioPostComponent._WritePortfolio.get("thumnail_file").value.replace(/\"/gi, "").replace(/\'/gi, "");
+    console.log("thumnail_file ::"+thumnail_val);
+    PortfolioPostComponent._WritePortfolio.get("thumnail").setValue(thumnail_val,{});
+    alert(responsed_data);
+  }
 
   constructor(private http: Http, private route?: ActivatedRoute, private router?: Router){
   }

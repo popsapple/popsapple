@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const nodemailer = require('nodemailer');
 const bodyParserJsonError = require('express-body-parser-json-error');
+const multer = require('multer');
+const multerS3 = require('multer-s3');
+const fs = require('file-system');
+const aws = require('aws-sdk');
 const app = express();
 
 app.use(express.static(__dirname + '/dist'));
@@ -31,3 +35,6 @@ const send_mail = require('./lib/send_mail.js').SendEmailFun(app,request,nodemai
 
 // 포트폴리오
 const portfolio = require('./lib/portfolio/portfolio_route.js').PortfolioList(app,mongoose);
+
+// 파일업로드
+const fileupload = require('./lib/upload_file/upload.js').upload_con(app,aws,multer,multerS3,fs);

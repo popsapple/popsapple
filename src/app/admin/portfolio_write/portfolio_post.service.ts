@@ -25,8 +25,10 @@ export class PortfolioPostService {
   public SubmitPortfolioThumbnailSend() {
     let that = this;
     let headers = new Headers({'Content-Type': 'multipart/form-data'});
+    console.log("클라이언트 업로드 SETP02");
     this.http.put('/upload_thumnail',PortfolioPostComponent._WritePortfolio.get("thumnail_file").value,{'headers': headers}).subscribe(
       data => {
+        console.log("클라이언트 업로드 SETP03");
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });
       },error => {

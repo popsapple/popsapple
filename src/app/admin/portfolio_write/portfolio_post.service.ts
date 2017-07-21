@@ -33,7 +33,7 @@ export class PortfolioPostService {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });
       },error => {
-        alert('다시 전송해주세요.');
+        alert('다시 전송해주세요. :: '+error);
       },() => {
       });
   }

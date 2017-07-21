@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { NgForm, FormGroup, Input, ElementRef, FormControl, Validators, ViewChild } from '@angular/forms';
+import { Injectable, Input, ElementRef, ViewChild } from '@angular/core';
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostComponent } from './portfolio.component';

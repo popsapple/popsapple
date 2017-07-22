@@ -29,12 +29,12 @@ export class PortfolioPostService {
     let headers = new Headers({'Content-Type': 'multipart/form-data'});
     console.log("클라이언트 업로드 SETP02 :: ");
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
-    let inputEl: HTMLInputElement = inputEl.nativeElement;
-    let fileCount: number = inputEl.files.length;
+    let inputElele: HTMLInputElement = inputEl.nativeElement;
+    let fileCount: number = inputElele.files.length;
     let formData = new FormData();
     if (fileCount > 0) { // a file was selected
       for (let i = 0; i < fileCount; i++) {
-          formData.append('file[]', inputEl.files.item(i));
+          formData.append('file[]', inputElele.files.item(i));
       }
       this.http.put('/upload_thumnail', formData).subscribe(
         data => {

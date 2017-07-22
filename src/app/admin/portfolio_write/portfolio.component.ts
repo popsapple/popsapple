@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, ElementRef} from '@angular/core';
 import { NgForm, FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -15,6 +15,7 @@ export class PortfolioPostComponent implements OnInit{
   ResponsedDataPrint: Object;
   WritePortfolio: FormGroup;
   PortfolioPostService_: PortfolioPostService;
+  @ViewChild('thumnail') inputEl: ElementRef;
 
   static _WritePortfolio: FormGroup;
   static post_index: any;
@@ -25,7 +26,7 @@ export class PortfolioPostComponent implements OnInit{
 
   SubmitPortfolioThumbnail() {
     console.log("클라이언트 업로드 SETP01-");
-    this.PortfolioPostService_.SubmitPortfolioThumbnailSend();
+    this.PortfolioPostService_.SubmitPortfolioThumbnailSend(this.inputEl);
   }
 
   ResponsedDataCheck(responsed_data:String):Observable<any> {

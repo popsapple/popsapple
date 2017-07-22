@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef} from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ViewChild} from '@angular/core';
 import { NgForm, FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';

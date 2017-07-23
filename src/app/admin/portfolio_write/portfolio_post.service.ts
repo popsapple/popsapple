@@ -29,11 +29,26 @@ export class PortfolioPostService {
     let headers = new Headers({'Content-Type': 'application/octet-stream'});
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
     // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
-    let formData = new FormData();
-    if(inputEl.nativeElement.files[0]) {
-      formData.append('file', inputEl.nativeElement.files[0]);
-    }
-    this.http.put('/upload_thumnail', {
+
+    const files = inputEl.files; // || $event.srcElement.files;
+    const file = files[0];
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const headers = new Headers({});
+    let options = new RequestOptions({ headers });
+    let url = '/upload_thumnail';
+
+    this.http.put(url, formData, options).subscribe(
+      data => {
+        this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
+        });
+      },error => {
+        alert('다시 전송해주세요. :: '+error);
+      },() => {
+    });
+
+  /*  this.http.put('/upload_thumnail', {
       file: formData
     }).subscribe(
       data => {
@@ -42,7 +57,7 @@ export class PortfolioPostService {
       },error => {
         alert('다시 전송해주세요. :: '+error);
       },() => {
-    });
+    });*/
   }
   public getPortfolioPostValue() {
     let that = this;

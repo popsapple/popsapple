@@ -15,6 +15,7 @@ export class MainVisualComponent implements AfterViewInit {
     console.log(this.document.location.href);
   }
   ngAfterViewInit(){
+    let that = this;
     that.client = new XMLHttpRequest();
     let location = that.document.location.href;
     that.class_list = that.loading_el.el.getAttribute('class');

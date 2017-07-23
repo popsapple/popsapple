@@ -30,7 +30,7 @@ export class PortfolioPostService {
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
     // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
     console.log("업로드 파일 정보 02 :: "+JSON.stringify(inputEl.nativeElement.files[0]));
-    this.http.put('/upload_thumnail', inputEl.nativeElement.files[0],{'headers': headers}).subscribe(
+    this.http.put('/upload_thumnail', inputEl.nativeElement.files[0]).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

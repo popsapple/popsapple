@@ -9,7 +9,7 @@
       <li>
         <label for="WritePortfolioThumbnail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Thumnail</label>
         <input id="WritePortfolioThumbnail" type="hidden" name="thumnail_file" formControlName="thumnail_file" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
-        <input id="WritePortfolioThumbnail" type="file" name="thumnail" #thumnail class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+        <input id="WritePortfolioThumbnail" type="file" [multiple]="multiple" name="thumnail" #thumnail class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
         <button (click)="SubmitPortfolioThumbnail()">파일올리기</button>
       </li>
       <li>

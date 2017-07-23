@@ -43,7 +43,6 @@ export class PortfolioPostService {
         alert('다시 전송해주세요. :: '+error);
       },() => {
       });
-    }
   /*  this.http.put('/upload_thumnail', {
       file: formData
     }).subscribe(

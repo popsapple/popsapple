@@ -26,15 +26,13 @@ export class PortfolioPostService {
   }
   public SubmitPortfolioThumbnailSend(inputEl:any) {
     let that = this;
-  //  let headers = new Headers({'Content-Type': 'application/octet-stream'});
-    // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
-    // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
 
     const files = inputEl.nativeElement.files; // || $event.srcElement.files;
     const file = files[0];
     const formData = new FormData();
     formData.append('file', file);
 
+    console.log("폼데이터 확인 :: "+formData);
     const headers = new Headers({'Content-Type': 'application/octet-stream'});
     let options = new RequestOptions({ headers });
     let url = '/upload_thumnail';

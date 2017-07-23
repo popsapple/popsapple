@@ -35,7 +35,7 @@ export class PortfolioPostService {
     const formData = new FormData();
     formData.append('file', file);
 
-    const headers = new Headers({'Content-Type': 'application/octet-stream'});
+    const headers = new Headers();
     let options = new RequestOptions({ headers });
     let url = '/upload_thumnail';
 

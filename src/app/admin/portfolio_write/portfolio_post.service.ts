@@ -31,13 +31,9 @@ export class PortfolioPostService {
     const file = files[0];
     const formData = new FormData();
     formData.append('file', file);
-
-    console.log("폼데이터 확인 :: "+formData);
-    const headers = new Headers({'Content-Type': 'application/octet-stream'});
-    let options = new RequestOptions({ headers });
     let url = '/upload_thumnail';
-
-    this.http.put(url, formData, { headers: headers, responseType: ResponseContentType.Blob }).subscribe(
+    let header = new Headers({'enctype': 'multipart/form-data'});
+    this.http.put(url, data, header).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

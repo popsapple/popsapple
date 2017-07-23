@@ -31,11 +31,12 @@ export class PortfolioPostService {
     let data = new FormData();
 
     if(files_data) {
+      console.log("AAAAAAAA");
       data.append('file', files_data);
     }
 
     let header = new Headers({'enctype': 'multipart/form-data'});
-    this.http.put('/upload_thumnail', files[0]).subscribe(
+    this.http.put('/upload_thumnail', FormData, header).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

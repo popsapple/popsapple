@@ -1,6 +1,6 @@
 import { Injectable, Input, ElementRef, ViewChild } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-import { Http, Headers, Response, RequestOptionsArgs, RequestOptions } from '@angular/http';
+import { Http, Headers, Response, RequestOptionsArgs, RequestOptions, ResponseContentType } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostComponent } from './portfolio.component';
 import { FileUploader } from 'ng2-file-upload';
@@ -39,7 +39,7 @@ export class PortfolioPostService {
     let options = new RequestOptions({ headers });
     let url = '/upload_thumnail';
 
-    this.http.put(url, formData, options).subscribe(
+    this.http.put(url, formData, { responseType: ResponseContentType.Blob }).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

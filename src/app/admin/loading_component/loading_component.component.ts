@@ -12,11 +12,9 @@ export class LoadingComponent implements AfterViewInit {
   client:any;
   @ViewChild(LoadingElement) loading_el: LoadingElement;
   constructor(@Inject(DOCUMENT) private document: any,private renderer:Renderer) {
-    console.log(this.document.location.href);
   }
   ngAfterViewInit(){
     let that = this;
-    console.log("LoadingElement :: "+LoadingElement);
     that.client = new XMLHttpRequest();
     let location = that.document.location.href;
     that.class_list = that.loading_el.el.getAttribute('class');
@@ -60,7 +58,7 @@ export class LoadingComponent implements AfterViewInit {
               },1000);
             }
           })(count,point_time);
-        },500);
+        },2000);
         //progressBar.value = pe.loaded
       }
     }

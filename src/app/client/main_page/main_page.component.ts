@@ -15,8 +15,6 @@ export class MainVisualComponent implements AfterViewInit {
     console.log(this.document.location.href);
   }
   ngAfterViewInit(){
-
-    let that = this;console.log("AAAA :: "+that.loading_el);
     that.client = new XMLHttpRequest();
     let location = that.document.location.href;
     that.class_list = that.loading_el.el.getAttribute('class');
@@ -60,7 +58,7 @@ export class MainVisualComponent implements AfterViewInit {
               },1000);
             }
           })(count,point_time);
-        },500);
+        },2000);
         //progressBar.value = pe.loaded
       }
     }

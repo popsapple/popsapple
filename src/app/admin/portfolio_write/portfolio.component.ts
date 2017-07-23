@@ -25,7 +25,6 @@ export class PortfolioPostComponent implements OnInit{
   }
 
   SubmitPortfolioThumbnail() {
-    console.log("클라이언트 업로드 SETP01-");
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend(this.inputEl);
   }
 

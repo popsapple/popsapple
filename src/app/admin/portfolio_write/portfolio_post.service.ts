@@ -1,6 +1,6 @@
 import { Injectable, Input, ElementRef, ViewChild } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-import { Http, Headers, Response } from '@angular/http';
+import { Http, Headers, Response, RequestOptionsArgs } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostComponent } from './portfolio.component';
 import { FileUploader } from 'ng2-file-upload';
@@ -33,13 +33,8 @@ export class PortfolioPostService {
     var formData = new FormData(inputEl.nativeElement);
     console.log("업로드 파일 정보 03 :: "+JSON.stringify(formData));
     this.http.put('/upload_thumnail', {
-            file: formData // new FormData(); with image file appended.
-        },{
-            transformRequest: angular.identity,
-            headers: {
-                'Content-Type': 'multipart/form-data'
-            }
-        }).subscribe(
+      file: formData // new FormData(); with image file appended.
+    }).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

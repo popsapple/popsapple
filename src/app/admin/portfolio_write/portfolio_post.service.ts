@@ -31,8 +31,7 @@ export class PortfolioPostService {
     let data = new FormData();
 
     if(files_data) {
-      console.log("AAAAAAAA");
-      data.append('file', files_data);
+      data.append('thumnail', files_data);
     }
 
     let header = new Headers({'enctype': 'multipart/form-data'});
@@ -43,7 +42,7 @@ export class PortfolioPostService {
       },error => {
         alert('다시 전송해주세요. :: '+error);
       },() => {
-      });
+    });
   /*  this.http.put('/upload_thumnail', {
       file: formData
     }).subscribe(

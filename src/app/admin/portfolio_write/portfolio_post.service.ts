@@ -1,6 +1,6 @@
 import { Injectable, Input, ElementRef, ViewChild } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-import { Http, Headers, Response, RequestOptionsArgs } from '@angular/http';
+import { Http, Headers, Response, RequestOptionsArgs, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { PortfolioPostComponent } from './portfolio.component';
 import { FileUploader } from 'ng2-file-upload';

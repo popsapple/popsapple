@@ -35,7 +35,7 @@ export class PortfolioPostService {
     }
     this.http.put('/upload_thumnail', {
       formData
-    },{'headers': headers}).subscribe(
+    }).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

@@ -33,7 +33,7 @@ export class PortfolioPostService {
     formData.append('file', file);
     let url = '/upload_thumnail';
     let header = new Headers({'enctype': 'multipart/form-data'});
-    this.http.put(url, data, header).subscribe(
+    this.http.put(url, formData, header).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

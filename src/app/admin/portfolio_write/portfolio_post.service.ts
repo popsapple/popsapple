@@ -28,22 +28,16 @@ export class PortfolioPostService {
     let that = this;
     let headers = new Headers({'Content-Type': 'multipart/form-data'});
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
-    let inputElele: HTMLInputElement = inputEl.nativeElement;
-    let fileCount: number = inputElele.files.length;
-    let formData = new FormData();
-    if (fileCount > 0) { // a file was selected
-      for (let i = 0; i < fileCount; i++) {
-          formData.append('file[]', inputElele.files.item(i));
-      }
-      this.http.put('/upload_thumnail', formData).subscribe(
-        data => {
-          this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
-          });
-        },error => {
-          alert('다시 전송해주세요. :: '+error);
-        },() => {
-      });
-    }
+    // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
+    console.log("업로드 파일 정보 02 :: "+inputEl.nativeElement.files[0]);
+    this.http.put('/upload_thumnail', inputEl.nativeElement.files[0]).subscribe(
+      data => {
+        this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
+        });
+      },error => {
+        alert('다시 전송해주세요. :: '+error);
+      },() => {
+    });
   }
   public getPortfolioPostValue() {
     let that = this;

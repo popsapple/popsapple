@@ -25,6 +25,8 @@ export class PortfolioPostComponent implements OnInit{
   }
 
   SubmitPortfolioThumbnail() {
+    console.log("업로드 파일 정보 00 :: "+this.inputEl.nativeElement.files[0]);
+    console.log("업로드 파일 정보 01 :: "+JSON.stringify(this.inputEl.nativeElement.files[0]));
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend(this.inputEl);
   }
 
@@ -61,7 +63,6 @@ export class PortfolioPostComponent implements OnInit{
   ngOnInit(){
     this.WritePortfolio = new FormGroup({ //FormGroup 을 쓸 때에 반드시 한번은 정의해줘야 하므로....
       url: new FormControl(''),
-      thumnail: new FormControl(''),
       thumnail_file: new FormControl(''),
       title: new FormControl(''),
       des_percent: new FormControl(''),

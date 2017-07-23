@@ -30,7 +30,7 @@ export class PortfolioPostService {
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
     // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
     console.log("업로드 파일 정보 02 :: "+JSON.stringify(inputEl.nativeElement.files[0]));
-    var formData = new FormData(inputEl.nativeElement);
+    var formData = new FormData(inputEl.nativeElement.files[0]);
     console.log("업로드 파일 정보 03 :: "+JSON.stringify(formData));
     this.http.put('/upload_thumnail', {
       file: formData // new FormData(); with image file appended.

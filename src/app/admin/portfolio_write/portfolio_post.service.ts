@@ -37,7 +37,7 @@ export class PortfolioPostService {
     let options = new RequestOptions({ headers });
     let url = '/upload_thumnail';
 
-    this.http.put(url, formData, { responseType: ResponseContentType.Blob }).subscribe(
+    this.http.put(url, formData, { headers: headers, responseType: ResponseContentType.Blob }).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

@@ -26,7 +26,7 @@ export class PortfolioPostService {
   }
   public SubmitPortfolioThumbnailSend(inputEl:any) {
     let that = this;
-    let headers = new Headers({'Content-Type': 'multipart/form-data'});
+    let headers = new Headers({'Content-Type': 'content-type': 'application/octet-stream'});
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
     // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
     let formData = new FormData();
@@ -34,8 +34,8 @@ export class PortfolioPostService {
       formData.append('file', inputEl.nativeElement.files[0]);
     }
     this.http.put('/upload_thumnail', {
-      file: formData
-    }).subscribe(
+      formData
+    },{'headers': headers}).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });

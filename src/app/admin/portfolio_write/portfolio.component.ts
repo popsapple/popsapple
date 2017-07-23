@@ -25,8 +25,6 @@ export class PortfolioPostComponent implements OnInit{
   }
 
   SubmitPortfolioThumbnail() {
-    console.log("업로드 파일 정보 00 :: "+this.inputEl.nativeElement.files[0]);
-    console.log("업로드 파일 정보 01 :: "+JSON.stringify(this.inputEl.nativeElement.files[0]));
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend(this.inputEl);
   }
 

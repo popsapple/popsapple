@@ -31,7 +31,7 @@ export class PortfolioPostService {
     let data = new FormData();
 
     if(files_data) {
-      data.append('thumnail', files_data);
+      data.append('thumnail', files_data); // <input type='' name='thumnail' value='files_data' /> 에 해당한다.
     }
 
     let header = new Headers({'enctype': 'multipart/form-data'});
@@ -43,16 +43,6 @@ export class PortfolioPostService {
         alert('다시 전송해주세요. :: '+error);
       },() => {
     });
-  /*  this.http.put('/upload_thumnail', {
-      file: formData
-    }).subscribe(
-      data => {
-        this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
-        });
-      },error => {
-        alert('다시 전송해주세요. :: '+error);
-      },() => {
-    });*/
   }
   public getPortfolioPostValue() {
     let that = this;

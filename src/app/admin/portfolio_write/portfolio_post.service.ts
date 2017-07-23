@@ -30,7 +30,7 @@ export class PortfolioPostService {
     // 브라우저가 자동 지정하므로 컨텐츠 타입 헤더를 지정하면 전송이 되지 않는다.... -_-....
     // console.log("업로드 파일 정보 :: "+JSON.stringify(inputElele));
 
-    const files = inputEl.files; // || $event.srcElement.files;
+    const files = inputEl.nativeElement.files; // || $event.srcElement.files;
     const file = files[0];
     const formData = new FormData();
     formData.append('file', file);

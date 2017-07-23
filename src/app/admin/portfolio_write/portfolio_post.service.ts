@@ -25,23 +25,25 @@ export class PortfolioPostService {
       });
   }
   public SubmitPortfolioThumbnailSend(inputEl:any) {
-    let that = this;
+    const files = inputEl.nativeElement.files;
+    let files_data = files[0];
 
-    const files = inputEl.nativeElement.files; // || $event.srcElement.files;
-    const file = files[0];
-    const formData = new FormData();
-    formData.append('file', file);
-    let url = '/upload_thumnail';
-    let header = new Headers({'Content-Type': 'multipart/form-data'});
-    this.http.put(url, formData, header).subscribe(
+    let data = new FormData();
+
+    if(files_data) {
+      data.append('image', files_data);
+    }
+
+    let header = new Headers({'enctype': 'multipart/form-data'});
+    this.http.put('/upload_thumnail', data, header).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });
       },error => {
         alert('다시 전송해주세요. :: '+error);
       },() => {
-    });
-
+      });
+    }
   /*  this.http.put('/upload_thumnail', {
       file: formData
     }).subscribe(

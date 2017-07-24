@@ -9,8 +9,7 @@
       <li>
         <label for="WritePortfolioThumbnail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Thumnail</label>
         <input id="WritePortfolioThumbnail" type="hidden" name="thumnail_file" formControlName="thumnail_file" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
-        <input id="WritePortfolioThumbnail" type="file" name="thumnail" #thumnail class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
-        <button (click)="SubmitPortfolioThumbnail()">파일올리기</button>
+        <input id="WritePortfolioThumbnail" type="file" name="thumnail" #thumnail (change)="SubmitPortfolioThumbnail()" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
       </li>
       <li>
         <label for="WritePortfolioTitle" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Subject</label>
@@ -33,7 +32,10 @@
         <textarea id="WritePortfolioDesc" type="text" name="desc" formControlName="desc" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12"></textarea>
       </li>
       <li>
-        <button (click)="SubmitPortfolioPost()" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 btn btn-primary button">Posting</button>
+        <button (click)="SubmitPortfolioPost()" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 btn btn-primary button">등록</button>
+      </li>
+      <li>
+        <button (click)="DeletePortfolioPost()" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 btn btn-primary button">삭제</button>
       </li>
     </ul>
   </form>

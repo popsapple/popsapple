@@ -15,7 +15,7 @@ export class PortfolioPostService {
   public SubmitPortfolioPostSend() {
     let that = this;
     let headers = new Headers({'Content-Type': 'application/json'});
-    this.http.put('/portfolio_post_put',JSON.stringify(PortfolioPostComponent._WritePortfolio.value),{'headers': headers}).subscribe(
+    this.http.put('/portfolio_post',JSON.stringify(PortfolioPostComponent._WritePortfolio.value),{'headers': headers}).subscribe(
       data => {
         this.PortfolioPostComponent.ResponsedDataCheck(data.json().message).subscribe(():void => {
         });
@@ -35,7 +35,7 @@ export class PortfolioPostService {
     }
 
     let header = new Headers({'enctype': 'multipart/form-data'});
-    this.http.put('/upload_thumnail', data, header).subscribe(
+    this.http.put('/portfolio_thumnail', data, header).subscribe(
       data => {
         this.PortfolioPostComponent.ThumfileUpload(data.json().message).subscribe(():void => {
         });
@@ -47,11 +47,21 @@ export class PortfolioPostService {
   public getPortfolioPostValue() {
     let that = this;
     let headers = new Headers({'Content-Type': 'application/json'});
-    this.http.get('/portfolio_post_info'+'?'+'post_index='+PortfolioPostComponent.post_index,{ headers: headers }).subscribe(
+    this.http.get('/portfolio_post'+'?'+'post_index='+PortfolioPostComponent.post_index,{ headers: headers }).subscribe(
       data => {
         let responsed_data:PortfolioListData = ParseJsonToObject(data);
         this.PortfolioPostComponent.ValueDataCheck(responsed_data).subscribe(():void => {
         });
+      },error => {
+        alert('다시 전송해주세요. :: '+error);
+      },() => {
+    });
+  }
+  public onDeletePortfolioPost() {
+    let that = this;
+    let headers = new Headers({'Content-Type': 'application/json'});
+    this.http.delete('/portfolio_post',{ headers: headers }).subscribe(
+      data => {
       },error => {
         alert('다시 전송해주세요. :: '+error);
       },() => {

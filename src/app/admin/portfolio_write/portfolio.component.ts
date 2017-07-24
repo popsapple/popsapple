@@ -36,6 +36,10 @@ export class PortfolioPostComponent implements OnInit{
    });
   };
 
+  DeletePortfolioPost(){
+    this.PortfolioPostService_.onDeletePortfolioPost();
+  }
+
   ValueDataCheck(responsed_data:PortfolioListData):Observable<any> {
     PortfolioPostComponent._WritePortfolio.get("url").setValue(responsed_data.url,{});
     PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(responsed_data.thumnail,{});

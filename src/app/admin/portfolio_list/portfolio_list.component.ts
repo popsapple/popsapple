@@ -20,7 +20,7 @@ export class PortfolioListComponent implements OnInit {
   constructor(private http: Http){};
   ngOnInit(){
     let headers = new Headers({'Content-Type': 'application/json'});
-    this.http.get('/portfolio_list_info',{'headers': headers}).subscribe(
+    this.http.get('/portfolio_list',{'headers': headers}).subscribe(
       data => {
         this.portfolio = {
             portfolio_list: data.json()

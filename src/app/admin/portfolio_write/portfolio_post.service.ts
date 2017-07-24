@@ -62,6 +62,7 @@ export class PortfolioPostService {
     let headers = new Headers({'Content-Type': 'application/json'});
     this.http.delete('/portfolio_post',{ headers: headers }).subscribe(
       data => {
+        window.location.href='/admin/portfolio_list';
       },error => {
         alert('다시 전송해주세요. :: '+error);
       },() => {

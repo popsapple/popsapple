@@ -13,9 +13,6 @@ export class LoadingComponent implements OnInit {
   static PageLoadingCheck: any;
   @ViewChild(LoadingElement) loading_el: LoadingElement;
   constructor(@Inject(DOCUMENT) private document: any,private renderer:Renderer) {
-  }
-
-  ngOnInit(){
     LoadingComponent.PageLoadingCheck = ():void => {
       let that = this;
       that.client = new XMLHttpRequest();
@@ -68,5 +65,9 @@ export class LoadingComponent implements OnInit {
         endloading();
       }
     }
+  }
+
+  ngOnInit(){
+
   }
 }

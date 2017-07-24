@@ -84,6 +84,7 @@ export class PortfolioPostComponent implements OnInit{
           this.PortfolioPostService_.getPortfolioPostValue();
         }else{
           PortfolioPostComponent.post_index = undefined;
+          LoadingComponent.PageLoadingCheck();
         }
       });
       PortfolioPostComponent._WritePortfolio = this.WritePortfolio;

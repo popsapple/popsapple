@@ -43,7 +43,7 @@ mongoose.connect("mongodb://heroku_70467gbs:ggvtdslkhd8dj1n1livvuemb09@ds153392.
 const send_mail = require('./lib/send_mail.js').SendEmailFun(app,request,nodemailer);
 
 // 포트폴리오
-const portfolio = require('./lib/portfolio/portfolio_route.js').PortfolioList(app,mongoose);
+const portfolio = require('./lib/portfolio/portfolio_route.js').PortfolioList(aws,app,mongoose);
 
 // 파일업로드
 const fileupload = require('./lib/upload_file/upload.js').upload_con(app,aws,multer,multerS3,fs);

@@ -55,8 +55,9 @@ export class PortfolioPostComponent implements OnInit{
    });
   };
 
-  ThumfileUpload(responsed_data:String):Observable<any> {
-    alert(responsed_data);
+  ThumfileUpload(responsed_data:any):Observable<any> {
+    PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(responsed_data.filepath,{});
+    alert(responsed_data.message);
     return Observable.create(observer => {
       observer.complete();
     });

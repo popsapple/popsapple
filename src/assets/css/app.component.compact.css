@@ -2680,14 +2680,14 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /** bootstrap custermize **/
 html .btn { border: 0px; text-transform: uppercase; }
 
-section, .section { margin: 0rem; padding: 0rem; display: block; }
+section, .section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
 
 /** variables **/
 html { height: auto; display: block; }
 
 body { height: auto; display: block; }
 
-html body { font-family: "Noto Sans KR", "Roboto", sans-serif; position: absolute; z-index: -1; }
+html body { font-family: "Noto Sans KR", "Roboto", sans-serif; position: absolute; z-index: -1; width: 100%; }
 
 .carousel-control { width: 5rem; z-index: 11; }
 

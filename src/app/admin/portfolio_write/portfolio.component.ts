@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { PortfolioPostService, PortfolioListData } from './portfolio_post.service';
 import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 import { Router,ActivatedRoute,Params } from '@angular/router';
+import { LoadingComponent } from './../loading_component/loading_component.component';
 @Component({
   selector: 'admin-portfolio-item',
   templateUrl: './portfolio.component.html',
@@ -43,6 +44,8 @@ export class PortfolioPostComponent implements OnInit{
     PortfolioPostComponent._WritePortfolio.get("publ_percent").setValue(responsed_data.publ_percent,{});
     PortfolioPostComponent._WritePortfolio.get("dev_percent").setValue(responsed_data.dev_percent,{});
     PortfolioPostComponent._WritePortfolio.get("desc").setValue(responsed_data.desc,{});
+
+    LoadingComponent.PageLoadingCheck();
     return Observable.create(observer => {
       observer.complete();
    });

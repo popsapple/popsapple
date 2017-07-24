@@ -48,10 +48,10 @@ export class LoadingComponent implements OnInit {
                 clearInterval(point_time_);
                 setTimeout(function(){
                   that.renderer.setElementAttribute(that.loading_el.el, 'class', that.active_class+' done');
-                },1000);
+                },500);
               }
             })(count,point_time);
-          },2000);
+          },1000);
         }
         let count = 0;
         let point_time = setInterval(function(){
@@ -63,7 +63,7 @@ export class LoadingComponent implements OnInit {
               clearInterval(point_time);
             }
           })(count,point_time);
-        },1000);
+        },500);
         clearInterval(point_time);
         endloading();
       }

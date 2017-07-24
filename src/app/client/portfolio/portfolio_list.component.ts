@@ -26,7 +26,7 @@ export class PortfolioListComponent implements OnInit {
         }
         this.portfolio_list_flex_script = new LoadTemplateScript().setScript('./../../assets/js/movefollitem.js');
       },error => {
-        alert('다시 전송해주세요.');
+        alert('다시 전송해주세요. PortfolioListComponent');
       },() => {
     });
   }

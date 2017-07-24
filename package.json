@@ -72,7 +72,10 @@
     "aws-sdk": "2.88.0",
     "file-system": "2.2.2",
     "multer": "1.3.0",
-    "multer-s3" : "2.7.0"
+    "multer-s3" : "2.7.0",
+    "crypto": "^0.0.3",
+    "cookie-parser": "^1.4.3",
+    "express-session" : "^1.15.4"
   },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.",
   "main": "karma.conf.js",

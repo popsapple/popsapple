@@ -9,6 +9,9 @@ const multerS3 = require('multer-s3');
 const fs = require('file-system');
 const aws = require('aws-sdk');
 const app = express();
+global.crypto = require('crypto');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 app.use(express.static(__dirname + '/dist'));
 app.use(bodyParser.urlencoded());
@@ -20,13 +23,19 @@ app.get('/',function(request,response){
   response.send('/index.html');
 });
 
+const usingSession = session({
+  key: process.env.SESSIONKEY, // 세션키
+  secret: process.env.SECRETKEY // 비밀키
+});
+app.use(usingSession);
+
 // DB 연결
 const mongoose = require('mongoose');
 
 const db = mongoose.connection;
 db.on('error', console.error);
 db.once('open', function(){
-    console.log("몽고디비에 연결되었습니다.");
+  console.log("몽고디비에 연결되었습니다.");
 });
 mongoose.connect("mongodb://heroku_70467gbs:ggvtdslkhd8dj1n1livvuemb09@ds153392.mlab.com:53392/heroku_70467gbs");
 // heroku config:get MONGODB_URI

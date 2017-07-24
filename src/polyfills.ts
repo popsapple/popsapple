@@ -19,7 +19,7 @@
  */
 
 /** IE9, IE10 and IE11 requires all of the following polyfills. **/
-import 'core-js/es6/symbol';
+/*import 'core-js/es6/symbol';
 import 'core-js/es6/object';
 import 'core-js/es6/function';
 import 'core-js/es6/parse-int';
@@ -32,7 +32,37 @@ import 'core-js/es6/array';
 import 'core-js/es6/regexp';
 import 'core-js/es6/map';
 import 'core-js/es6/weak-map';
-import 'core-js/es6/set';
+import 'core-js/es6/set';*/
+import "./assets/js/classList.min";
+
+import "core-js/modules/es6.typed.array-buffer";
+import "core-js/modules/es6.typed.data-view";
+import "core-js/modules/es6.typed.int8-array";
+import "core-js/modules/es6.typed.uint8-array";
+import "core-js/modules/es6.typed.uint8-clamped-array";
+import "core-js/modules/es6.typed.int16-array";
+import "core-js/modules/es6.typed.uint16-array";
+import "core-js/modules/es6.typed.int32-array";
+import "core-js/modules/es6.typed.uint32-array";
+import "core-js/modules/es6.typed.float32-array";
+import "core-js/modules/es6.typed.float64-array";
+import "core-js/modules/es6.object.to-string";
+
+import "reflect-metadata";
+
+import "core-js/es6/symbol";
+import "core-js/es6/object";
+import "core-js/es6/function";
+import "core-js/es6/parse-int";
+import "core-js/es6/parse-float";
+import "core-js/es6/number";
+import "core-js/es6/math";
+import "core-js/es6/string";
+import "core-js/es6/date";
+import "core-js/es6/array";
+import "core-js/es6/regexp";
+import "core-js/es6/map";
+import "core-js/es6/set";
 
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */

@@ -19,6 +19,8 @@ export class MainVisualComponent implements AfterViewInit {
     that.client = new XMLHttpRequest();
     let location = that.document.location.href;
     that.class_list = that.loading_el.el.getAttribute('class');
+    that.client.open("get", location);
+    that.client.send();
     if(that.client.onprogress === "object"){ // XMLHttpRequest2 라서 있을 때 없을 때를 구분해야 함.
       that.client.onprogress = function(pe) {
         if(pe.lengthComputable) {
@@ -34,19 +36,7 @@ export class MainVisualComponent implements AfterViewInit {
         },1000);
       }
     }else{
-      let count = 0;
-      let point_time = setInterval(function(){
-        count+= 10;
-        (function(count,point_time){
-          that.active_class = that.class_list+" point"+count;
-          that.renderer.setElementAttribute(that.loading_el.el, 'class', that.active_class);
-          if(count == 40){
-            clearInterval(point_time);
-          }
-        })(count,point_time);
-      },1000);
-      that.client.onloadend = function(pe) {
-        clearInterval(point_time);
+        const endloading = function(){
         let point_time_ = setInterval(function(){
           count+= 10;
           (function(count,point_time){
@@ -60,10 +50,25 @@ export class MainVisualComponent implements AfterViewInit {
             }
           })(count,point_time);
         },2000);
-        //progressBar.value = pe.loaded
+      }
+      let count = 0;
+      let point_time = setInterval(function(){
+        count+= 10;
+        (function(count,point_time){
+          that.active_class = that.class_list+" point"+count;
+          that.renderer.setElementAttribute(that.loading_el.el, 'class', that.active_class);
+          if(count == 40){
+            clearInterval(point_time);
+          }
+        })(count,point_time);
+      },1000);
+      if(!that.client.onloadend){
+        endloading();
+      }
+      that.client.onloadend = function(pe) {
+        clearInterval(point_time);
+        endloading();
       }
     }
-    that.client.open("get", location);
-    that.client.send();
   }
 }

@@ -18,7 +18,7 @@ export class CopyrightMailService {
         this.copyrightComponent.ResponsedDataCheck(responsed_data).subscribe(():void => {
         });
       },error => {
-        alert('다시 전송해주세요.');
+        alert('다시 전송해주세요. CopyrightMailService');
       },() => {
       });
   }

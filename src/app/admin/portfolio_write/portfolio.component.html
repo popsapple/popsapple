@@ -8,8 +8,8 @@
       </li>
       <li>
         <label for="WritePortfolioThumbnail" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Thumnail</label>
-        <input id="WritePortfolioThumbnail" type="hidden" name="thumnail_file" formControlName="thumnail_file" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
-        <input id="WritePortfolioThumbnail" type="file" name="thumnail" #thumnail (change)="SubmitPortfolioThumbnail()" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+        <input id="WritePortfolioThumbnail" type="hidden" name="thumnail" formControlName="thumnail" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
+        <input id="WritePortfolioThumbnail" type="file" name="thumnail_file" #thumnail (change)="SubmitPortfolioThumbnail()" class="item col-xs-12 col-sm-12 col-md-12 col-lg-12" />
       </li>
       <li>
         <label for="WritePortfolioTitle" class="title item col-xs-12 col-sm-12 col-md-12 col-lg-12">Subject</label>
@@ -39,5 +39,5 @@
       </li>
     </ul>
   </form>
-  <a routerLink="./list">포트폴리오 리스트</a>
+  <a routerLink="/admin/portfolio_list">포트폴리오 리스트</a>
 </section>

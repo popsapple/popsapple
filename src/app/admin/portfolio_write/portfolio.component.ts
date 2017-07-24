@@ -42,7 +42,7 @@ export class PortfolioPostComponent implements OnInit{
 
   ValueDataCheck(responsed_data:PortfolioListData):Observable<any> {
     PortfolioPostComponent._WritePortfolio.get("url").setValue(responsed_data.url,{});
-    PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(responsed_data.thumnail,{});
+    PortfolioPostComponent._WritePortfolio.get("thumnail").setValue(responsed_data.thumnail,{});
     PortfolioPostComponent._WritePortfolio.get("title").setValue(responsed_data.title,{});
     PortfolioPostComponent._WritePortfolio.get("des_percent").setValue(responsed_data.des_percent,{});
     PortfolioPostComponent._WritePortfolio.get("publ_percent").setValue(responsed_data.publ_percent,{});
@@ -56,7 +56,7 @@ export class PortfolioPostComponent implements OnInit{
   };
 
   ThumfileUpload(responsed_data:any):Observable<any> {
-    PortfolioPostComponent._WritePortfolio.get("thumnail_file").setValue(responsed_data.filepath,{});
+    PortfolioPostComponent._WritePortfolio.get("thumnail").setValue(responsed_data.filepath,{});
     alert(responsed_data.message);
     return Observable.create(observer => {
       observer.complete();
@@ -69,7 +69,7 @@ export class PortfolioPostComponent implements OnInit{
   ngOnInit(){
     this.WritePortfolio = new FormGroup({ //FormGroup 을 쓸 때에 반드시 한번은 정의해줘야 하므로....
       url: new FormControl(''),
-      thumnail_file: new FormControl(''),
+      thumnail: new FormControl(''),
       title: new FormControl(''),
       des_percent: new FormControl(''),
       publ_percent: new FormControl(''),

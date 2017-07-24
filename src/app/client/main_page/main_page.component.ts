@@ -14,7 +14,8 @@ export class MainVisualComponent implements AfterViewInit {
   constructor(@Inject(DOCUMENT) private document: any,private renderer:Renderer) {
     console.log(this.document.location.href);
   }
-  ngAfterViewInit(){
+
+  PageLoadingCheck(){
     let that = this;
     that.client = new XMLHttpRequest();
     let location = that.document.location.href;
@@ -71,4 +72,5 @@ export class MainVisualComponent implements AfterViewInit {
       }
     }
   }
+  ngAfterViewInit(){}
 }

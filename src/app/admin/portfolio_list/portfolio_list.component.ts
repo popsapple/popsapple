@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { MainVisualComponent } from './../../client/main_page/main_page.component';
 //import { CopyrightComponent } from './copyright.component';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -25,6 +26,7 @@ export class PortfolioListComponent implements OnInit {
             portfolio_list: data.json()
         }
         this.portfolio_list_flex_script = new LoadTemplateScript().setScript('./../../../assets/js/movefollitem.js');
+        MainVisualComponent.PageLoadingCheck();
       },error => {
         alert('다시 전송해주세요. PortfolioListComponent');
       },() => {

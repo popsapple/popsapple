@@ -8,7 +8,8 @@ section, .section { margin: 0rem; padding: 0rem; display: block; }
 /** variables **/
 .copyright_section { background: #080b17; color: white; font-size: 1.3rem; line-height: 3rem; width: 100%; height: auto; }
 
-@media screen and (min-width: 992px) { .copyright_section { height: 58vw; position: fixed; bottom: 0; z-index: -1; } }
+@media screen and (min-width: 992px) { .copyright_section { height: 58vw; position: fixed; bottom: 0; z-index: -1; }
+  .copyright_section:hover { z-index: 0; } }
 
 @media screen and (min-width: 1200px) { .copyright_section { height: 40vw; } }
 

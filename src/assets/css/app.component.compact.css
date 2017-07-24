@@ -2687,7 +2687,7 @@ html { height: auto; display: block; }
 
 body { height: auto; display: block; }
 
-html body { font-family: "Noto Sans KR", "Roboto", sans-serif; }
+html body { font-family: "Noto Sans KR", "Roboto", sans-serif; position: absolute; z-index: -1; }
 
 .carousel-control { width: 5rem; z-index: 11; }
 

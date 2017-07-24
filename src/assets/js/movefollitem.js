@@ -35,7 +35,7 @@ $.fn.onMovingFllowingItem = function(options){
     var col_width;
     var p_height;
     for(var i = 0; i < item_length; i++){ // 행 및 열번호 생성
-      obj.eq(i).width((obj.eq(i).parent().width()-(margin_size*(item_size-1)))/item_size);
+      obj.eq(i).width((obj.eq(i).parent().width()-(margin_size*(item_size-1)))/item_size)+1;
       col_count = i%item_size;
       col_count == 0 ? row_count+=1 : '';
       if(row_count == 0){

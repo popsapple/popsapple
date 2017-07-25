@@ -9,7 +9,7 @@ import { LoadingComponent } from './../loading_component/loading_component.compo
 @Component({
   selector: 'admin-portfolio-item',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./../../../assets/css/portfolio_list.component.compact.css'],
+  styleUrls: ['./../../../assets/css/portfolio_write.component.compact.css'],
   providers: [LoadTemplateScript,PortfolioPostService]
 })
 export class PortfolioPostComponent implements OnInit{
@@ -22,7 +22,16 @@ export class PortfolioPostComponent implements OnInit{
   static post_index: any;
 
   SubmitPortfolioPost() {
-    this.PortfolioPostService_.SubmitPortfolioPostSend();
+    sendEmailFormCheck = true;
+    PortfolioPostComponent._WritePortfolio.get("thumnail").setValidators(Validators.compose([customVailCheck])); // 값 검증 이벤트(?) 셋팅
+    PortfolioPostComponent._WritePortfolio.get("title").setValidators(Validators.compose([customVailCheck]));
+    PortfolioPostComponent._WritePortfolio.get("thumnail").updateValueAndValidity({ onlySelf: false, emitEvent: true }); // 값 검증 이벤트(?) 실행
+    PortfolioPostComponent._WritePortfolio.get("title").updateValueAndValidity({ onlySelf: true, emitEvent: true });
+    if(sendEmailFormCheck){
+      this.PortfolioPostService_.SubmitPortfolioPostSend();
+    }else{
+      alert("썸네일 이미지와 제목은 필수입력입니다 :)");
+    }
   }
 
   SubmitPortfolioThumbnail() {
@@ -90,4 +99,14 @@ export class PortfolioPostComponent implements OnInit{
       PortfolioPostComponent._WritePortfolio = this.WritePortfolio;
     }
   }
+}
+let sendEmailFormCheck: Boolean;
+function customVailCheck(c: FormControl) {
+  console.log("값 체크 :: "+c.value);
+  if(sendEmailFormCheck){
+    if(c.value == ""){
+      sendEmailFormCheck = false;
+    }
+  }
+  return sendEmailFormCheck;
 }

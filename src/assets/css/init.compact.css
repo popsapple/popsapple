@@ -2,6 +2,6 @@
 /** bootstrap custermize **/
 html .btn { border: 0px; text-transform: uppercase; }
 
-section, .section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
+.section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
 
 /** variables **/

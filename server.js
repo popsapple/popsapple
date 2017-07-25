@@ -47,3 +47,6 @@ const portfolio = require('./lib/portfolio/portfolio_route.js').PortfolioList(aw
 
 // 파일업로드
 const fileupload = require('./lib/upload_file/upload.js').upload_con(app,aws,multer,multerS3,fs);
+
+// 관리자로그인
+const association = require('./lib/login/association.js').association_con(app);

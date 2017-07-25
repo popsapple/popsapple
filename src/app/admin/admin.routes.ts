@@ -3,6 +3,7 @@ import { Routes,RouterModule } from '@angular/router';
 import { PortfolioListComponent } from './portfolio_list/portfolio_list.component';
 import { PortfolioPostComponent } from './portfolio_write/portfolio.component';
 import { AdminRootComponent } from './admin_root.component';
+import { AdminLoginComponent } from './login/admin_login.component';
 
 const adminRoutes: Routes = [
   {
@@ -11,7 +12,7 @@ const adminRoutes: Routes = [
     children: [
       {
         path: '',
-        component: PortfolioListComponent
+        component: AdminLoginComponent
       },
       {
         path: 'portfolio_write',

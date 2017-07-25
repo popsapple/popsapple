@@ -2680,7 +2680,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /** bootstrap custermize **/
 html .btn { border: 0px; text-transform: uppercase; }
 
-section, .section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
+.section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
 
 /** variables **/
 html { height: auto; display: block; }
@@ -2699,11 +2699,13 @@ ul li, ol li { list-style: none; }
 
 .blind_item, figcaption { position: absolute !important; width: 1px !important; display: inline-block !important; overflow: hidden !important; padding-left: 2px !important; }
 
-.main-section { background: #ffffff; margin: 0rem; padding: 0rem; margin-bottom: auto; }
+.main-section { background: #ffffff; margin: 0rem; padding: 0rem; margin-bottom: auto; position: relative; z-index: 1; }
 
 @media screen and (min-width: 992px) { .main-section { margin-bottom: 58vw; } }
 
 @media screen and (min-width: 1200px) { .main-section { margin-bottom: 40vw; } }
+
+.nav-tabs.admin a { margin: 0rem; }
 
 .loading_div { position: fixed; z-index: 20; top: 0rem; background: #ffffff; width: 100vw; height: 100vh; display: block; font-size: 0px; }
 

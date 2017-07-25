@@ -3,7 +3,7 @@
 /** bootstrap custermize **/
 html .btn { border: 0px; text-transform: uppercase; }
 
-section, .section { margin: 0rem; padding: 0rem; display: block; }
+.section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
 
 /** variables **/
 .copyright_section { background: #080b17; color: white; font-size: 1.3rem; line-height: 3rem; width: 100%; height: auto; }

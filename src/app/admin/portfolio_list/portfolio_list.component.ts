@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ElementRef} from '@angular/core';
 import { LoadTemplateScript } from './../../lib/loadjs/loadscript.service';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -18,6 +18,7 @@ export class PortfolioListComponent implements OnInit {
   portfolio_list_flex_script:any;
 
   constructor(private http: Http){};
+
   ngOnInit(){
     let headers = new Headers({'Content-Type': 'application/json'});
     this.http.get('/portfolio_list',{'headers': headers}).subscribe(

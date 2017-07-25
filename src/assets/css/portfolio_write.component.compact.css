@@ -1,0 +1,14 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/** bootstrap custermize **/
+html .btn { border: 0px; text-transform: uppercase; }
+
+.section { margin: 0rem; padding: 0rem; display: block; width: 100%; }
+
+/** variables **/
+.adminsideform ul { padding: 0rem; }
+
+.adminsideform ul li > * { min-width: 10rem; border-top: 0rem; }
+
+.adminsideform ul li.buttonbox { margin-top: 0.5rem; }
+
+.adminsideform ul li.buttonbox button { max-width: 6rem; margin-right: 0.5rem; }

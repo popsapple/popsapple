@@ -12,6 +12,7 @@ import { AdminLoginComponent } from './login/admin_login.component';
 import { PortfolioListComponent } from './portfolio_list/portfolio_list.component';
 import { PortfolioPostComponent } from './portfolio_write/portfolio.component';
 import { PortfolioPostService } from './portfolio_write/portfolio_post.service';
+import { AdminLoginService } from './login/admin_login.service';
 
 enableProdMode();
 @NgModule({
@@ -32,6 +33,7 @@ enableProdMode();
     LibCommonModule
   ],
   exports: [],
+  providers: [AdminLoginService],
   bootstrap: [AdminRootComponent]
 })
 export class AdminSideModule {

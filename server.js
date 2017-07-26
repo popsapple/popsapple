@@ -25,7 +25,10 @@ app.get('/',function(request,response){
 
 const usingSession = session({
   key: process.env.SESSIONKEY, // 세션키
-  secret: process.env.SECRETKEY // 비밀키
+  secret: process.env.SECRETKEY, // 비밀키
+  cookie: {
+    maxAge: 1000 * 60 * 180 // 3시간
+  }
 });
 app.use(usingSession);
 

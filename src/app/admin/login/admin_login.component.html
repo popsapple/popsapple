@@ -1,3 +1,4 @@
+<loading-item></loading-item>
 <section class="section adminsideform adminloginsection">
   <form [formGroup]="AdminLoginForm" enctype="multipart/form-data" >
     <ul>
@@ -7,10 +8,10 @@
       </li>
       <li class="input-group">
         <label for="AdminLoginFormPw" class="title item input-group-addon">Pw</label>
-        <input id="AdminLoginFormPw" type="text" name="pw" formControlName="pw" class="item form-control" />
+        <input id="AdminLoginFormPw" type="password" name="pw" formControlName="pw" class="item form-control" />
       </li>
       <li class="buttonbox admin">
-        <button (click)="onAdminLogin" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 btn btn-primary button">로그인</button>
+        <button (click)="onAdminLogin()" class="col-xs-12 col-sm-3 col-md-3 col-lg-3 btn btn-primary button">로그인</button>
       </li>
     </ul>
   </form>

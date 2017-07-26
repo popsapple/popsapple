@@ -4,11 +4,13 @@ import { PortfolioListComponent } from './portfolio_list/portfolio_list.componen
 import { PortfolioPostComponent } from './portfolio_write/portfolio.component';
 import { AdminRootComponent } from './admin_root.component';
 import { AdminLoginComponent } from './login/admin_login.component';
+import { AdminLoginService } from './login/admin_login.service';
 
 const adminRoutes: Routes = [
   {
     path: 'admin',
     component: AdminRootComponent, // 컴포넌트 기준으로 경로가 정해짐. ex) ./portfolio_lit == /admin/portfolio_list
+    canActivate: [AdminLoginService],
     children: [
       {
         path: '',

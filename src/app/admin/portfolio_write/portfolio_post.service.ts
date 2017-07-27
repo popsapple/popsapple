@@ -17,7 +17,7 @@ export class PortfolioPostService {
     let headers = new Headers({'Content-Type': 'application/json'});
     this.http.put('/portfolio_post',JSON.stringify(PortfolioPostComponent._WritePortfolio.value),{'headers': headers}).subscribe(
       data => {
-        this.PortfolioPostComponent.ResponsedDataCheck(data.json().message).subscribe(():void => {
+        this.PortfolioPostComponent.ResponsedDataCheck(data.json()).subscribe(():void => {
         });
       },error => {
         alert('다시 전송해주세요. SubmitPortfolioPostSend');

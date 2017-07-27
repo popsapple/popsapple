@@ -38,10 +38,10 @@ export class PortfolioPostComponent implements OnInit{
     this.PortfolioPostService_.SubmitPortfolioThumbnailSend(this.inputEl);
   }
 
-  ResponsedDataCheck(responsed_data:String):Observable<any> {
-    alert(responsed_data);
-    if(data.json().url != undefined){
-      window.location.href = data.json().url;      
+  ResponsedDataCheck(responsed_data:any):Observable<any> {
+    alert(responsed_data.message);
+    if(responsed_data.url != undefined){
+      window.location.href = responsed_data.url;
     }
     return Observable.create(observer => {
       observer.complete();

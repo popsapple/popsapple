@@ -53,3 +53,12 @@ const fileupload = require('./lib/upload_file/upload.js').upload_con(app,aws,mul
 
 // 관리자로그인
 const association = require('./lib/login/association.js').association_con(app);
+
+
+//에러 처리
+app.use(function(req, res) {
+   res.status(400).send("<script>alert('요청하신 페이지는 존재하지 않습니다.');window.location.href='/';</script>");
+});
+app.use(function(error, req, res, next) {
+   res.status(500).send("<script>alert('요청하신 페이지는 존재하지 않습니다.');window.location.href='/';</script>");
+});

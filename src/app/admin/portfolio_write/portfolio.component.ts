@@ -40,6 +40,9 @@ export class PortfolioPostComponent implements OnInit{
 
   ResponsedDataCheck(responsed_data:String):Observable<any> {
     alert(responsed_data);
+    if(data.json().url != undefined){
+      window.location.href = data.json().url;      
+    }
     return Observable.create(observer => {
       observer.complete();
    });

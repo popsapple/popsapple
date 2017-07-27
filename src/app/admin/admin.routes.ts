@@ -11,6 +11,7 @@ const adminRoutes: Routes = [
     path: 'admin',
     component: AdminRootComponent, // 컴포넌트 기준으로 경로가 정해짐. ex) ./portfolio_lit == /admin/portfolio_list
     canActivate: [AdminLoginService],
+    canActivateChild: [AdminLoginService],
     children: [
       {
         path: '',

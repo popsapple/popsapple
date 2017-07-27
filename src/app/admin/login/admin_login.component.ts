@@ -24,7 +24,6 @@ export class AdminLoginComponent implements AfterViewInit{
     AdminLoginComponent._AdminLoginForm = this.AdminLoginForm;
   }
   onAdminLogin(){
-    console.log("onAdminLogin");
     let AdminLoginServiceClass = new AdminLoginService(this.http);
     AdminLoginService.AdminLoginSubmitPost();
   }

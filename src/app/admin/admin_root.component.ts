@@ -28,6 +28,9 @@ export class AdminRootComponent implements AfterViewChecked {
     }else if(this.router.url.indexOf('/admin/portfolio_write') == -1){
       this.renderer.setElementAttribute(this.portfoliowritemenuEle.nativeElement, 'class', '');
       this.renderer.setElementAttribute(this.portfoliolistmenuEle.nativeElement, 'class', 'active');
+    }else if(this.router.url == '/#/admin'){
+      this.renderer.setElementAttribute(this.portfoliowritemenuEle.nativeElement, 'class', '');
+      this.renderer.setElementAttribute(this.portfoliolistmenuEle.nativeElement, 'class', '');
     }
   }
 }

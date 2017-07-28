@@ -10,7 +10,7 @@ html .btn { border: 0px; text-transform: uppercase; }
 
 .sikllchart > div { display: table-cell !important; }
 
-.siklllist_section { padding: 0rem; }
+.siklllist_section { background: #f2f2f2; padding: 0rem; }
 
 .siklllist_section > div { width: 90%; padding: 2rem; padding-top: 3.5rem; margin: auto; margin-bottom: 2rem; background: #ffffff; border: 1px solid #e7e7e7; line-height: 3rem; font-size: 1.5rem; }
 

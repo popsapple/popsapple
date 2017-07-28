@@ -56,9 +56,11 @@ const association = require('./lib/login/association.js').association_con(app);
 
 
 //에러 처리
-app.use(function(req, res) {
+app.use(function(error, req, res) {
    res.status(400).send("<script>alert('요청하신 페이지는 존재하지 않습니다.');window.location.href='/';</script>");
+   res.end();
 });
 app.use(function(error, req, res, next) {
    res.status(500).send("<script>alert('요청하신 페이지는 존재하지 않습니다.');window.location.href='/';</script>");
+   res.end();
 });

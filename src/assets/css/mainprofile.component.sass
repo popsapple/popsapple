@@ -44,6 +44,15 @@ ul.profile_img
   > ul
     li
       opacity: 0
+      transform: rotateZ(0deg)
+      -webkit-transform: rotateZ(0deg)
+      -moz-transform: rotateZ(0deg)
+      -ms-transform: rotateZ(0deg)
+
+      transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s
+      -webkit-transition: opacity 0.5s ease-out 0s, -webkit-transform 0.5s ease-out 0s
+      -moz-transition: opacity 0.5s ease-out 0s, -moz-transform 0.5s ease-out 0s
+      -ms-transition: opacity 0.5s ease-out 0s, -ms-transform 0.5s ease-out 0s
   p
     opacity: 0
     transition: opacity 0.8s ease-in 2s
@@ -53,5 +62,29 @@ ul.profile_img
     > ul
       li
         opacity: 1
+        transform: rotateZ(180deg)
+        -webkit-transform: rotateZ(180deg)
+        -moz-transform: rotateZ(180deg)
+        -ms-transform: rotateZ(180deg)
+
+        transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s
+        -webkit-transition: opacity 0.5s ease-out 0s, -webkit-transform 0.5s ease-out 0s
+        -moz-transition: opacity 0.5s ease-out 0s, -moz-transform 0.5s ease-out 0s
+        -ms-transition: opacity 0.5s ease-out 0s, -ms-transform 0.5s ease-out 0s
+      &+li
+        transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s
+        -webkit-transition: opacity 0.5s ease-out 0.5s, -webkit-transform 0.5s ease-out 0.5s
+        -moz-transition: opacity 0.5s ease-out 0.5s, -moz-transform 0.5s ease-out 0.5s
+        -ms-transition: opacity 0.5s ease-out 0.5s, -ms-transform 0.5s ease-out 0.5s
+        &+li
+          transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s
+          -webkit-transition: opacity 0.5s ease-out 1s, -webkit-transform 0.5s ease-out 1s
+          -moz-transition: opacity 0.5s ease-out 1s, -moz-transform 0.5s ease-out 1s
+          -ms-transition: opacity 0.5s ease-out 1s, -ms-transform 0.5s ease-out 1s
+          &+li
+            transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s
+            -webkit-transition: opacity 0.5s ease-out 1.5s, -webkit-transform 0.5s ease-out 1.5s
+            -moz-transition: opacity 0.5s ease-out 1.5s, -moz-transform 0.5s ease-out 1.5s
+            -ms-transition: opacity 0.5s ease-out 1.5s, -ms-transform 0.5s ease-out 1.5s
     p
       opacity: 1

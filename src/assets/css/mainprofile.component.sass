@@ -47,9 +47,9 @@ ul.profile_img
       transform: rotateY(0deg)
       -moz-transform: rotateY(0deg)
       -webkit-transform: rotateY(0deg)
-      transition: opacity 0.5s, transform 0.5s ease-in 0s
-      -webkit-transition: opacity 0.5s, -webkit-transform 0.5s ease-in 0s
-      -moz-transition: opacity 0.5s, -moz-transform 0.5s ease-in 0s
+      transition: opacity 0.5s ease-in 0s, transform 0.5s ease-in 0s
+      -webkit-transition: -webkit-transform 0.5s ease-in 0s, opacity 0.5s ease 0s
+      -moz-transition: opacity 0.5s ease-in 0s, -moz-transform 0.5s ease-in 0s ease-in 0s
   p
     opacity: 0
     transition: opacity 0.8s ease-in 2s
@@ -62,20 +62,20 @@ ul.profile_img
         transform: rotateY(360deg)
         -moz-transform: rotateY(360deg)
         -webkit-transform: rotateY(360deg)
-        transition: opacity 0.5s, transform 0.5s ease-in 0s
-        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s ease-in 0s
-        -moz-transition: opacity 0.5s, -moz-transform 0.5s ease-in 0s
+        transition: opacity 0.5s ease-in 0s, transform 0.5s ease-in 0s
+        -webkit-transition: -webkit-transform 0.5s ease-in 0s, opacity 0.5s ease 0s
+        -moz-transition: opacity 0.5s ease-in 0s, -moz-transform 0.5s ease-in 0s ease-in 0s
         &+li
-        transition: opacity 0.5s, transform 0.5s ease-in 0.5s
-        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s ease-in 0.5s
-        -moz-transition: opacity 0.5s, -moz-transform 0.5s ease-in 0.5s
+        transition: opacity 0.5s ease-in 0s, transform 0.5s ease-in 0s
+        -webkit-transition: -webkit-transform 0.5s ease-in 0.5s, opacity 0.5s ease 0.5s
+        -moz-transition: opacity 0.5s ease-in 0.5s, -moz-transform 0.5s ease-in 0s ease-in 0.5s
         &+li+li
-        transition: opacity 0.5s, transform 0.5s ease-in 1s
-        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s ease-in 1s
-        -moz-transition: opacity 0.5s, -moz-transform 0.5s ease-in 1s
+        transition: opacity 0.5s ease-in 0s, transform 0.5s ease-in 0s
+        -webkit-transition: -webkit-transform 0.5s ease-in 1s, opacity 0.5s ease 1s
+        -moz-transition: opacity 0.5s ease-in 1s, -moz-transform 0.5s ease-in 0s ease-in 1s
         &+li+li+li
-        transition: opacity 0.5s, transform 0.5s ease-in 1.5s
-        -webkit-transition: opacity 0.5s, -webkit-transform 0.5s ease-in 1.5s
-        -moz-transition: opacity 0.5s, -moz-transform 0.5s ease-in 1.5s
+        transition: opacity 0.5s ease-in 0s, transform 0.5s ease-in 1.5s
+        -webkit-transition: -webkit-transform 0.5s ease-in 1.5s, opacity 0.5s ease 1.5s
+        -moz-transition: opacity 0.5s ease-in 1.5s, -moz-transform 0.5s ease-in 0s ease-in 1.5s
     p
       opacity: 1

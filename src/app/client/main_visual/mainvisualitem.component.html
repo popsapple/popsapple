@@ -7,17 +7,18 @@
 <div id="MainVisualSlider" aria-live="polite" class="carouselinner carousel-inner" role="listbox">
   <ng-container *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;">
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
-      <figure>
+      <!--figure>
         <picture>
           <source media="(min-width: 1200px)" [srcset]="item.main_visual_img_mobile"></source>
           <source media="(min-width: 992px)" [srcset]="item.main_visual_img_mobile"></source>
           <source media="(min-width: 768px)" [srcset]="item.main_visual_img"></source>
           <source media="(min-width: 320px)" [srcset]="item.main_visual_img"></source>
-          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
+          <img [src]="item.main_visual_img_mobile" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
           <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
-      </figure>
+      </figure-->
+      {{item.main_visual_img_mobile}}
       <div class="carousel-caption">
         <div><div>
           <h2 class="visible-md visible-lg">{{item.main_visual_title_md}}</h2>
@@ -28,17 +29,18 @@
       </div>
     </div>
     <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
-      <figure>
+      <!--figure>
         <picture>
           <source media="(min-width: 1200px)" [srcset]="item.main_visual_img_mobile"></source>
           <source media="(min-width: 992px)" [srcset]="item.main_visual_img_mobile"></source>
           <source media="(min-width: 768px)" [srcset]="item.main_visual_img"></source>
           <source media="(min-width: 320px)" [srcset]="item.main_visual_img"></source>
-          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
+          <img [src]="item.main_visual_img_mobile" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
           <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
-      </figure>
+      </figure-->
+      {{item.main_visual_img_mobile}}
       <div class="carousel-caption">
         <div><div>
           <h2 class="visible-md visible-lg">{{item.main_visual_title_md}}</h2>

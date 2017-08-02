@@ -148,5 +148,5 @@ $.fn.onMovingFllowingItem = function(options){
 };
 
 if($(".portfolio_list > ul > li")){
-  //$(".portfolio_list > ul > li").onMovingFllowingItem();
+  $(".portfolio_list > ul > li").onMovingFllowingItem();
 }

@@ -10,13 +10,13 @@ html .btn { border: 0px; text-transform: uppercase; }
 @keyframes main_visual_img { 0% { transform: scale(1); }
   100% { transform: scale(1.2); } }
 
-.carousel-inner .item img { max-width: 150%; height: auto; transform: scale(1.2); animation: main_visual_img 2s 0s; }
+.carousel-inner .item img { width: auto; height: auto; transform: scale(1.2); animation: main_visual_img 2s 0s; }
 
-@media (min-width: 768px) { .carousel-inner .item img { width: 150%; min-width: auto; height: auto; } }
+@media (min-width: 768px) { .carousel-inner .item img { width: auto; min-width: auto; height: auto; } }
 
-@media (min-width: 992px) { .carousel-inner .item img { width: 145%; } }
+@media (min-width: 992px) { .carousel-inner .item img { width: auto; } }
 
-@media (min-width: 1200px) { .carousel-inner .item img { width: 130%; } }
+@media (min-width: 1200px) { .carousel-inner .item img { width: auto; } }
 
 .carousel-inner .item { height: 100%; overflow: hidden; }
 

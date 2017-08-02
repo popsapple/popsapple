@@ -32,10 +32,6 @@ ul.profile_img figure img { display: block; max-width: 14rem; border-radius: 50%
 
 .profile_section_con p em span:last-child:after { display: none; }
 
-.profile_section_con > ul li { opacity: 0; transform: rotateY(0deg); -moz-transform: rotateY(0deg); -webkit-transform: rotateY(0deg); transition: opacity 0.5s ease-in 0s, transform 0.5s ease-in 0s; -webkit-transition: -webkit-transform 0.5s ease-in 0s, opacity 0.5s ease 0s; -moz-transition: opacity 0.5s ease-in 0s, -moz-transform 0.5s ease-in 0s ease-in 0s; }
-
 .profile_section_con p { opacity: 0; transition: opacity 0.8s ease-in 2s; -webkit-transition: opacity 0.8s ease-in 2s; -moz-transition: opacity 0.8s ease-in 2s; }
-
-.profile_section_con.scroll_active > ul li { opacity: 1; transform: rotateY(360deg); -moz-transform: rotateY(360deg); -webkit-transform: rotateY(360deg); }
 
 .profile_section_con.scroll_active p { opacity: 1; }

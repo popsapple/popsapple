@@ -45,7 +45,9 @@ ul.profile_img
     li
       opacity: 0
       transform: rotateY(0deg)
-      transition: opacity 0.5s, transform 0.5s ease-in 0s
+      -moz-transform: rotateY(0deg)
+      -webkit-transform: rotateY(0deg)
+      transition: opacity 0.5s, transform 0.5s, -moz-transform 0.5s, -webkit-transform 0.5s ease-in 0s
   p
     opacity: 0
     transition: opacity 0.8s ease-in 2s
@@ -54,12 +56,14 @@ ul.profile_img
       li
         opacity: 1
         transform: rotateY(360deg)
-        transition: opacity 0.5s, transform 0.5s ease-in 0s
+        -moz-transform: rotateY(360deg)
+        -webkit-transform: rotateY(360deg)
+        transition: opacity 0.5s, transform 0.5s, -moz-transform 0.5s, -webkit-transform 0.5s ease-in 0s
         &+li
-          transition: opacity 0.5s, transform 0.5s ease-in 0.5s
+        transition: opacity 0.5s, transform 0.5s, -moz-transform 0.5s, -webkit-transform 0.5s ease-in 0.5s
         &+li+li
-          transition: opacity 0.5s, transform 0.5s ease-in 1s
+        transition: opacity 0.5s, transform 0.5s, -moz-transform 0.5s, -webkit-transform 0.5s ease-in 1s
         &+li+li+li
-          transition: opacity 0.5s, transform 0.5s ease-in 1.5s
+        transition: opacity 0.5s, transform 0.5s, -moz-transform 0.5s, -webkit-transform 0.5s ease-in 1.5s
     p
       opacity: 1

@@ -9,7 +9,18 @@
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <figure>
         <picture>
-          <source size="100vw" srcset="{{item.main_visual_img}} 1200w,{{item.main_visual_img}} 992w,{{item.main_visual_img_mobile}} 768w,{{item.main_visual_img_mobile}} 320w">
+          <source media="(min-width: 320px)" type="image/jpg"
+          srcset="{{item.main_visual_img_mobile}} 1x, {{item.main_visual_img_mobile}} 2x,
+          {{item.main_visual_img_mobile}} 3x">
+          <source media="(min-width: 768px)" type="image/jpg"
+          srcset="{{item.main_visual_img_mobile}} 1x, {{item.main_visual_img_mobile}} 2x,
+          {{item.main_visual_img_mobile}} 3x">
+          <source media="(min-width: 992px)" type="image/jpg"
+          srcset="{{item.main_visual_img}} 1x, {{item.main_visual_img}} 2x,
+          {{item.main_visual_img}} 3x">
+          <source media="(min-width: 1200px)" type="image/jpg"
+          srcset="{{item.main_visual_img}} 1x, {{item.main_visual_img}} 2x,
+          {{item.main_visual_img}} 3x">
           <img src="">
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
@@ -26,7 +37,18 @@
     <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
       <figure>
         <picture>
-          <source size="100vw" srcset="{{item.main_visual_img}} 1200w,{{item.main_visual_img}} 992w,{{item.main_visual_img_mobile}} 768w,{{item.main_visual_img_mobile}} 320w">
+          <source media="(min-width: 320px)" type="image/jpg"
+          srcset="{{item.main_visual_img_mobile}} 1x, {{item.main_visual_img_mobile}} 2x,
+          {{item.main_visual_img_mobile}} 3x">
+          <source media="(min-width: 768px)" type="image/jpg"
+          srcset="{{item.main_visual_img_mobile}} 1x, {{item.main_visual_img_mobile}} 2x,
+          {{item.main_visual_img_mobile}} 3x">
+          <source media="(min-width: 992px)" type="image/jpg"
+          srcset="{{item.main_visual_img}} 1x, {{item.main_visual_img}} 2x,
+          {{item.main_visual_img}} 3x">
+          <source media="(min-width: 1200px)" type="image/jpg"
+          srcset="{{item.main_visual_img}} 1x, {{item.main_visual_img}} 2x,
+          {{item.main_visual_img}} 3x">
           <img src="">
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>

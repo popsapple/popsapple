@@ -9,12 +9,12 @@
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <figure>
         <picture>
-          <source media="(min-width: 1200px)" [srcset]="item.main_visual_img_mobile">
-          <source media="(min-width: 992px)" [srcset]="item.main_visual_img_mobile">
-          <source media="(min-width: 768px)" [srcset]="item.main_visual_img">
-          <source media="(min-width: 320px)" [srcset]="item.main_visual_img">
-          <img [src]="item.main_visual_img_mobile" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
-          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
+          <source media="(min-width: 1200px)" [srcset]="item.main_visual_img">
+          <source media="(min-width: 992px)" [srcset]="item.main_visual_img">
+          <source media="(min-width: 768px)" [srcset]="item.main_visual_img_mobile">
+          <source media="(min-width: 320px)" [srcset]="item.main_visual_img_mobile">
+          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
+          <img [src]="item.main_visual_img_mobile" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
@@ -30,12 +30,12 @@
     <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
       <figure>
         <picture>
-          <source media="(min-width: 1200px)" [srcset]="item.main_visual_img_mobile">
-          <source media="(min-width: 992px)" [srcset]="item.main_visual_img_mobile">
-          <source media="(min-width: 768px)" [srcset]="item.main_visual_img">
-          <source media="(min-width: 320px)" [srcset]="item.main_visual_img">
-          <img [src]="item.main_visual_img_mobile" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
-          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
+          <source media="(min-width: 1200px)" [srcset]="item.main_visual_img">
+          <source media="(min-width: 992px)" [srcset]="item.main_visual_img">
+          <source media="(min-width: 768px)" [srcset]="item.main_visual_img_mobile">
+          <source media="(min-width: 320px)" [srcset]="item.main_visual_img_mobile">
+          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
+          <img [src]="item.main_visual_img_mobile" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>

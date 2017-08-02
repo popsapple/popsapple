@@ -18,6 +18,7 @@ export class ScrollPointCheckDirective {
     this.offset_top = this._el.nativeElement.offsetTop;
     this.window_top = $event.currentTarget.scrollY || $event.currentTarget.pageYOffset;
     this.class_list = this._el.nativeElement.getAttribute('class');
+    alert("맥에서 안됨 확인.... :: "+this.active_class+" :: "+this.class_list);
     if(this.active_class == undefined){
       this.active_class = this.class_list+" scroll_active";
     }

@@ -9,9 +9,14 @@
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <figure>
         <picture>
-          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc">
+          <source media="(min-width: 1200px)" [attr.srcset]="item.main_visual_img_mobile"></source>
+          <source media="(min-width: 992px)" [attr.srcset]="item.main_visual_img_mobile"></source>
+          <source media="(min-width: 768px)" [attr.srcset]="item.main_visual_img"></source>
+          <source media="(min-width: 320px)" [attr.srcset]="item.main_visual_img"></source>
+          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
+          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
         </picture>
-          <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
+        <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
       <div class="carousel-caption">
         <div><div>
@@ -25,9 +30,14 @@
     <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
       <figure>
         <picture>
-          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc">
+          <source media="(min-width: 1200px)" [attr.srcset]="item.main_visual_img_mobile"></source>
+          <source media="(min-width: 992px)" [attr.srcset]="item.main_visual_img_mobile"></source>
+          <source media="(min-width: 768px)" [attr.srcset]="item.main_visual_img"></source>
+          <source media="(min-width: 320px)" [attr.srcset]="item.main_visual_img"></source>
+          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-md visible-lg" />
+          <img [src]="item.main_visual_img" [alt]="item.main_visual_desc" class="visible-xs visible-sm" />
         </picture>
-          <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
+        <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
       <div class="carousel-caption">
         <div><div>

@@ -10,7 +10,7 @@ html .btn { border: 0px; text-transform: uppercase; }
 @keyframes main_visual_img { 0% { transform: scale(1); }
   100% { transform: scale(1.2); } }
 
-.carousel-inner .item img { max-width: 400%; height: 100%; transform: scale(1.2); animation: main_visual_img 2s 0s; }
+.carousel-inner .item img { max-width: 150%; height: auto; transform: scale(1.2); animation: main_visual_img 2s 0s; }
 
 @media (min-width: 768px) { .carousel-inner .item img { width: 150%; min-width: auto; height: auto; } }
 

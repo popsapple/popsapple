@@ -8,12 +8,34 @@
   <ng-container *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;">
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <figure>
-        <picture>
-          <source [srcset]="item.main_visual_img+' 1x, '+item.main_visual_img+' 2x, '+item.main_visual_img+' 3x'" type="image/jpg" media="(min-width: 1200px)">
-          <source [srcset]="item.main_visual_img+' 1x, '+item.main_visual_img+' 2x, '+item.main_visual_img+' 3x'" type="image/jpg" media="(min-width: 992px)">
-          <source [srcset]="item.main_visual_img_mobile+' 1x, '+item.main_visual_img_mobile+' 2x, '+item.main_visual_img_mobile+' 3x'" type="image/jpg" media="(min-width: 768px)">
-          <source [srcset]="item.main_visual_img_mobile+' 1x, '+item.main_visual_img_mobile+' 2x, '+item.main_visual_img_mobile+' 3x'" type="image/jpg" media="(min-width: 320px)">
-        </picture>
+        <!--picture>
+
+<source media="(max-width: 20em)" srcset="images/small/space-needle.jpg 1x,
+images/small/space-needle-2x.jpg 2x, images/small/space-needle-hd.jpg 3x">
+
+<source media="(max-width: 40em)" srcset="images/medium/space-needle.jpg 1x,
+images/medium/space-needle-2x.jpg 2x, images/medium/space-needle-hd.jpg 3x">
+
+<img src="space-needle.jpg" alt="Space Needle">
+
+</picture-->
+<picture>
+
+<source media="(max-width: 1200px)" srcset="./../../assets/image/visual/main_visual02.jpg 1x,
+./../../assets/image/visual/main_visual02.jpg 2x, ./../../assets/image/visual/main_visual02.jpg 3x">
+
+<source media="(max-width: 992px)" srcset="./../../assets/image/visual/main_visual02.jpg 1x,
+./../../assets/image/visual/main_visual02.jpg 2x, ./../../assets/image/visual/main_visual02.jpg 3x">
+
+<source media="(max-width: 768px)" srcset="./../../assets/image/visual/main_visual02_m.jpg 1x,
+./../../assets/image/visual/main_visual02_m.jpg 2x, ./../../assets/image/visual/main_visual02_m.jpg 3x">
+
+<source media="(max-width: 320px)" srcset="./../../assets/image/visual/main_visual02_m.jpg 1x,
+./../../assets/image/visual/main_visual02_m.jpg 2x, ./../../assets/image/visual/main_visual02_m.jpg 3x">
+
+<img src="./../../assets/image/visual/main_visual02_m.jpg" alt="Space Needle">
+
+</picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
       <div class="carousel-caption">
@@ -28,11 +50,22 @@
     <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
       <figure>
         <picture>
-          <source [srcset]="item.main_visual_img+' 1x, '+item.main_visual_img+' 2x, '+item.main_visual_img+' 3x'" type="image/jpg" media="(min-width: 1200px)">
-          <source [srcset]="item.main_visual_img+' 1x, '+item.main_visual_img+' 2x, '+item.main_visual_img+' 3x'" type="image/jpg" media="(min-width: 992px)">
-          <source [srcset]="item.main_visual_img_mobile+' 1x, '+item.main_visual_img_mobile+' 2x, '+item.main_visual_img_mobile+' 3x'" type="image/jpg" media="(min-width: 768px)">
-          <source [srcset]="item.main_visual_img_mobile+' 1x, '+item.main_visual_img_mobile+' 2x, '+item.main_visual_img_mobile+' 3x'" type="image/jpg" media="(min-width: 320px)">
-        </picture>
+
+<source media="(max-width: 1200px)" srcset="./../../assets/image/visual/main_visual02.jpg 1x,
+./../../assets/image/visual/main_visual02.jpg 2x, ./../../assets/image/visual/main_visual02.jpg 3x">
+
+<source media="(max-width: 992px)" srcset="./../../assets/image/visual/main_visual02.jpg 1x,
+./../../assets/image/visual/main_visual02.jpg 2x, ./../../assets/image/visual/main_visual02.jpg 3x">
+
+<source media="(max-width: 768px)" srcset="./../../assets/image/visual/main_visual02_m.jpg 1x,
+./../../assets/image/visual/main_visual02_m.jpg 2x, ./../../assets/image/visual/main_visual02_m.jpg 3x">
+
+<source media="(max-width: 320px)" srcset="./../../assets/image/visual/main_visual02_m.jpg 1x,
+./../../assets/image/visual/main_visual02_m.jpg 2x, ./../../assets/image/visual/main_visual02_m.jpg 3x">
+
+<img src="./../../assets/image/visual/main_visual02_m.jpg" alt="Space Needle">
+
+</picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
       <div class="carousel-caption">

@@ -34,7 +34,7 @@ ul.profile_img figure img { display: block; max-width: 14rem; border-radius: 50%
 
 .profile_section_con > ul li { opacity: 0; }
 
-.profile_section_con > ul li img { transform: rotateY(0deg); -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); -ms-transform: rotateY(0deg); -webkit-transform-origin: 0% 0%; transform-origin: 0% 0%; transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -webkit-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -moz-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -ms-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; }
+.profile_section_con > ul li img { transform: rotateY(0deg); -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); -ms-transform: rotateY(0deg); -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -webkit-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -moz-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -ms-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; }
 
 .profile_section_con p { opacity: 0; transition: opacity 0.8s ease-in 2s; -webkit-transition: opacity 0.8s ease-in 2s; -moz-transition: opacity 0.8s ease-in 2s; }
 
@@ -42,10 +42,10 @@ ul.profile_img figure img { display: block; max-width: 14rem; border-radius: 50%
 
 .profile_section_con.scroll_active > ul li img { transform: rotateY(360deg); -webkit-transform: rotateY(360deg); -moz-transform: rotateY(360deg); -ms-transform: rotateY(360deg); transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -webkit-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -moz-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; -ms-transition: opacity 0.5s ease-out 0s, transform 0.5s ease-out 0s; }
 
-.profile_section_con.scroll_active > ul li + li { transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; -webkit-transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; -moz-transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; -ms-transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; }
+.profile_section_con.scroll_active > ul li + li img { transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; -webkit-transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; -moz-transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; -ms-transition: opacity 0.5s ease-out 0.5s, transform 0.5s ease-out 0.5s; }
 
-.profile_section_con.scroll_active > ul li + li + li { transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; -webkit-transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; -moz-transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; -ms-transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; }
+.profile_section_con.scroll_active > ul li + li + li img { transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; -webkit-transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; -moz-transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; -ms-transition: opacity 0.5s ease-out 1s, transform 0.5s ease-out 1s; }
 
-.profile_section_con.scroll_active > ul li + li + li + li { transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; -webkit-transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; -moz-transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; -ms-transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; }
+.profile_section_con.scroll_active > ul li + li + li + li img { transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; -webkit-transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; -moz-transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; -ms-transition: opacity 0.5s ease-out 1.5s, transform 0.5s ease-out 1.5s; }
 
 .profile_section_con.scroll_active p { opacity: 1; }

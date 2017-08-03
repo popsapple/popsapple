@@ -55,4 +55,6 @@ html .btn { border: 0px; text-transform: uppercase; }
 
 .copyright_section > div > section i.mail:after { font-family: 'FontAwesome'; font-size: 2rem; font-style: normal; content: ""; color: #ffffff; margin-top: 1rem; }
 
-.copyright_section .width-full { width: 100%; height: 5rem; line-height: 5rem; font-size: 1.3rem; text-align: center; background: #10162e; }
+.copyright_section .width-full { width: 100%; height: 5rem; line-height: 5rem; font-size: 1rem; text-align: center; background: #10162e; }
+
+@media screen and (min-width: 992px) { .copyright_section .width-full { font-size: 1.3rem; } }

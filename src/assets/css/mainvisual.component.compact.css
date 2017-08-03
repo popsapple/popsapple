@@ -14,15 +14,15 @@ html .btn { border: 0px; text-transform: uppercase; }
 
 @media (min-width: 768px) { .carousel-inner .item img { width: auto; min-width: auto; height: auto; } }
 
-@media (min-width: 992px) { .carousel-inner .item img { width: auto; } }
+@media (min-width: 992px) { .carousel-inner .item img { width: 100%; } }
 
-@media (min-width: 1200px) { .carousel-inner .item img { width: auto; } }
+@media (min-width: 1200px) { .carousel-inner .item img { width: 100%; } }
 
 .carousel-inner, .carousel-inner .item { height: 100vh; max-height: 600px; overflow: hidden; }
 
 @media (min-width: 768px) { .carousel-inner, .carousel-inner .item { max-height: 1280px; } }
 
-@media (min-width: 992px) { .carousel-inner, .carousel-inner .item { max-height: auto; } }
+@media (min-width: 992px) { .carousel-inner, .carousel-inner .item { max-height: none; } }
 
 .carousel-caption { bottom: auto; top: 0rem; left: 0rem; height: 100%; width: 100%; padding: 0rem; background: url(./../image/transparent_gray.png); }
 

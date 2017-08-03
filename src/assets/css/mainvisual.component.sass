@@ -27,12 +27,12 @@
 .carousel-inner,
 .carousel-inner .item
   height: 100vh
-  max-height: 600px
+  max-height: calc((100vw * 16) / 9)
   overflow: hidden
   @media (min-width: $screen-sm-min)
-    max-height: 1280px
+    max-height: calc((100vw * 16) / 9)
   @media (min-width: $screen-md-min)
-    max-height: none
+    max-height: calc((100vw * 16) / 9)
 .carousel-caption
   bottom: auto
   top: 0rem

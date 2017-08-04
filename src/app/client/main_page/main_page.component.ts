@@ -1,6 +1,7 @@
 import { Component,ViewChild,Directive,ElementRef,Renderer,Inject,OnInit } from '@angular/core';
 import { LoadingElement } from './../../lib/loading/app_loading.directive';
 import { DOCUMENT } from '@angular/platform-browser';
+
 @Component({
   selector: 'main-root',
   templateUrl: './main_page.component.html',

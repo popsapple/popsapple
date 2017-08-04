@@ -9,12 +9,12 @@
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <figure>
         <picture>
-          <source media="(min-width: 1200px)" srcset="./../../../assets/image/visual/main_visual01.jpg">
-          <source media="(min-width: 992px)" srcset="./../../../assets/image/visual/main_visual01.jpg">
-          <source media="(min-width: 768px)" srcset="./../../../assets/image/visual/main_visual01_m.jpg">
-          <source media="(min-width: 320px)" srcset="./../../../assets/image/visual/main_visual01_m.jpg">
+          <source *ngIf="main_visual_width == 'lg'" media="(max-width: 1200px)" srcset="./../../../assets/image/visual/main_visual01.jpg">
+          <source *ngIf="main_visual_width == 'md'" media="(min-width: 992px)" srcset="./../../../assets/image/visual/main_visual01.jpg">
+          <source *ngIf="main_visual_width == 'sm'" media="(min-width: 768px)" srcset="./../../../assets/image/visual/main_visual01_mobile.jpg">
+          <source *ngIf="main_visual_width == 'xs'" media="(min-width: 320px)" srcset="./../../../assets/image/visual/main_visual01_mobile.jpg">
           <img src="./../../../assets/image/visual/main_visual01.jpg" class="visible-md visible-lg">
-          <img src="./../../../assets/image/visual/main_visual01_m.jpg" class="visible-xs visible-sm">
+          <img src="./../../../assets/image/visual/main_visual01_mobile.jpg" class="visible-xs visible-sm">
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
@@ -30,12 +30,12 @@
     <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
       <figure>
         <picture>
-          <source media="(min-width: 1200px)" srcset="./../../../assets/image/visual/main_visual02.jpg">
-          <source media="(min-width: 992px)" srcset="./../../../assets/image/visual/main_visual02.jpg">
-          <source media="(min-width: 768px)" srcset="./../../../assets/image/visual/main_visual02_m.jpg">
-          <source media="(min-width: 320px)" srcset="./../../../assets/image/visual/main_visual02_m.jpg">
+          <source *ngIf="main_visual_width == 'lg'" media="(max-width: 1200px)" srcset="./../../../assets/image/visual/main_visual02.jpg">
+          <source *ngIf="main_visual_width == 'md'" media="(min-width: 992px)" srcset="./../../../assets/image/visual/main_visual02.jpg">
+          <source *ngIf="main_visual_width == 'sm'" media="(min-width: 768px)" srcset="./../../../assets/image/visual/main_visual02_mobile.jpg">
+          <source *ngIf="main_visual_width == 'xs'" media="(min-width: 320px)" srcset="./../../../assets/image/visual/main_visual02_mobile.jpg">
           <img src="./../../../assets/image/visual/main_visual02.jpg" class="visible-md visible-lg">
-          <img src="./../../../assets/image/visual/main_visual02_m.jpg" class="visible-xs visible-sm">
+          <img src="./../../../assets/image/visual/main_visual02_mobile.jpg" class="visible-xs visible-sm">
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>

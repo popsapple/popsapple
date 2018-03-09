@@ -5,7 +5,7 @@ selector: 'base-chart',
 templateUrl: './chart-component.html',
 styleUrls: ['./../../../assets/css/portfolio_chart.component.compact.css']
 })
-export class BaseChartDemoComponent {
+export class BaseChartDemoComponent implements AfterViewInit {
   @ViewChild(BaseChartDirective) public _chart;
   @Input() chartdata1 = "300";
   @Input() chartdata2 = "500";
@@ -43,5 +43,9 @@ export class BaseChartDemoComponent {
 
   public chartHovered(e:any):void {
     this._chart.refresh();
+  }
+
+  ngAfterViewInit(){
+    console.log("iframe 갯수 :: "+this._chart.nativeElement.querySelectorAll("iframe").length);
   }
 }

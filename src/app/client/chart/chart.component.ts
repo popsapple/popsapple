@@ -50,6 +50,8 @@ export class BaseChartDemoComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(){
-    console.log("iframe 갯수 :: "+this.el.nativeElement.querySelectorAll("iframe").length);
+    this.el.nativeElement.querySelector("iframe").setAttribute("title","");
+    this.el.nativeElement.querySelector("iframe").setAttribute("src","");
+    this.el.nativeElement.querySelector("iframe").setAttribute("aria-hidden","true");
   }
 }

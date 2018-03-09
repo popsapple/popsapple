@@ -7,7 +7,7 @@
       <li *ngFor="let item of portfolio.portfolio_list; let i=index; let first=first; let last=last;">
         <section class="portfolio_info">
           <div class="top">
-              <a [href]="item.url" class="figure" target="_blank">
+              <a [href]="item.url" class="figure" target="_blank" title="{{item.title}} 바로가기">
                 <div class="table">
                 <div class="cell">
                   <h3>{{item.title}}</h3>

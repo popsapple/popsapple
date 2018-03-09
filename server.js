@@ -14,6 +14,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/testing'));
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 

@@ -50,7 +50,6 @@ export class BaseChartDemoComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(){
-    let remove_frame = this.el.nativeElement.querySelector("iframe");
-    remove_frame.parentNode.removeChild(remove_frame);
+    this.el.nativeElement.querySelector("iframe").setAttribute("role") = "presentation";
   }
 }

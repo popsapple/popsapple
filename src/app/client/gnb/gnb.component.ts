@@ -24,6 +24,13 @@ export class MenuItemDirective implements AfterViewInit {
       position = $("body").height();
     }
     $("html, body").animate({ scrollTop: position }, 500);
+    this.current_target.attr("tabindex",0);
+    var getting_focus = setInterval(function(){
+      this.current_target.focus();
+      if(this.current_target.is(":focus")){
+        clearInterval(getting_focus);
+      }
+    },100);
     if(this.targettag != 'anchor'){
       $(".gnb-toggle-btn").click();
     }

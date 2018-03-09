@@ -49,6 +49,6 @@ export class BaseChartDemoComponent implements AfterViewInit {
     this._chart.refresh();
   }
   ngAfterViewInit(){
-    this.el.nativeElement.querySelector("iframe").setAttribute("role", "presentation");
+    this.el.nativeElement.querySelector("iframe").setAttribute("aria-hidden", "true");
   }
 }

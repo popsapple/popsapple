@@ -1,4 +1,4 @@
-import { Component, Directive, Input, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, Directive, Input, ViewChild, AfterViewInit,ElementRef,Renderer } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 @Component({
 selector: 'base-chart',
@@ -34,6 +34,10 @@ export class BaseChartDemoComponent implements AfterViewInit {
       enabled: false
     }
   }
+
+  constructor(private el: ElementRef) {
+  }
+
   public randomizeType():void {
     this.pieChartType = this.pieChartType === 'doughnut' ? 'pie' : 'doughnut';
   }
@@ -46,6 +50,6 @@ export class BaseChartDemoComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(){
-    console.log("iframe 갯수 :: "+this._chart.nativeElement.querySelectorAll("iframe").length);
+    console.log("iframe 갯수 :: "+this.el.nativeElement.querySelectorAll("iframe").length);
   }
 }

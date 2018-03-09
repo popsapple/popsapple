@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $('.gnb-toggle-btn').click(function(){
+      $(".gnb-navbar").removeClass("load");
+     if($('.gnb-navbar').hasClass('in')){
+         $(".gnb-navbar").addClass("out");
+     }else{
+       $(".gnb-navbar").removeClass("out");
+     }
+  });
+});

@@ -9,6 +9,9 @@ html
 body
   height: auto
   display: block
+body h1
+  &.blind
+    width: 0px
 html body
   font-family: "Noto Sans KR", "Roboto", sans-serif
   position: absolute
@@ -17,11 +20,6 @@ html body
 .carousel-control
   width: 5rem
   z-index: 11
-html h1.blind
-  width: 0px
-  height: 0px
-  text-indent: 10px
-  overflow: hidden
 html body .btn-default.bg-none
   background-color: transparent
   border: 1px solid $brand-white

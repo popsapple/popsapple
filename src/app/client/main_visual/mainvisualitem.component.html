@@ -4,7 +4,7 @@
     <button *ngIf="!first">non-active</button>
   </li>
 </ol>
-<div id="MainVisualSlider" aria-live="polite" class="carouselinner carousel-inner" role="listbox">
+<div id="MainVisualSlider" class="carouselinner carousel-inner" role="listbox">
   <ng-container *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;">
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <figure>

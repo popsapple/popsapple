@@ -8,7 +8,7 @@
   <ng-container *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;">
     <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
       <div class="carousel-captioning">
-        <div><div>
+        <div><div role="region">
           <h2 class="visible-md visible-lg">{{item.main_visual_title_md}}</h2>
           <h2 class="visible-xs visible-sm">{{item.main_visual_title}}</h2>
           <span>{{item.main_visual_title_eng}}</span>

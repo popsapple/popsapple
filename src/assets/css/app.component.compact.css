@@ -2697,6 +2697,8 @@ html body .btn-default.bg-none { background-color: transparent; border: 1px soli
 
 html body .btn-default.bg-none:hover { background-color: #ffffff; border-color: #ffffff; color: #555555; }
 
+html body .btn-default.bg-none:focus { background-color: #ffffff; border-color: #ffffff; color: #555555; }
+
 ul li, ol li { list-style: none; }
 
 .blind_item, figcaption { position: absolute !important; width: 1px !important; display: inline-block !important; overflow: hidden !important; padding-left: 2px !important; }

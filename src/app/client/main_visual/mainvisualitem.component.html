@@ -4,9 +4,9 @@
     <button *ngIf="!first">non-active</button>
   </li>
 </ol>
-<div id="MainVisualSlider" class="carouselinner carousel-inner" role="listbox">
+<div id="MainVisualSlider" role="group" class="carouselinner carousel-inner">
   <ng-container *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;">
-    <div *ngIf="first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item active">
+    <div *ngIf="first" id="SliderItem0{{i+1}}" role="treeitem" class="item active">
       <div class="carousel-captioning">
         <div><div role="region">
           <h2 class="visible-md visible-lg">{{item.main_visual_title_md}}</h2>
@@ -26,7 +26,15 @@
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
     </div>
-    <div *ngIf="!first" id="SliderItem0{{i+1}}" [attr.aria-hidden]="!first" class="item">
+    <div *ngIf="!first" id="SliderItem0{{i+1}}" role="treeitem" class="item">
+      <div class="carousel-captioning">
+        <div><div>
+          <h2 class="visible-md visible-lg">{{item.main_visual_title_md}}</h2>
+          <h2 class="visible-xs visible-sm">{{item.main_visual_title}}</h2>
+          <span>{{item.main_visual_title_eng}}</span>
+          <a class="btn btn-default bg-none" data-targeting="Menu_Portfolio" data-targettag="anchor" role="button" title="PORTFOLIO 바로보기" menu-item>VIEW PORTFOLIO</a>
+        </div></div>
+      </div>
       <figure>
         <picture>
           <source *ngIf="main_visual_width == 'lg'" media="(max-width: 1200px)" srcset="./../../../assets/image/visual/main_visual02.jpg">
@@ -37,14 +45,6 @@
         </picture>
         <figcaption class="blind">{{item.main_visual_desc}}</figcaption>
       </figure>
-      <div class="carousel-caption">
-        <div><div>
-          <h2 class="visible-md visible-lg">{{item.main_visual_title_md}}</h2>
-          <h2 class="visible-xs visible-sm">{{item.main_visual_title}}</h2>
-          <span>{{item.main_visual_title_eng}}</span>
-          <a class="btn btn-default bg-none" data-targeting="Menu_Portfolio" data-targettag="anchor" role="button" title="PORTFOLIO 바로보기" menu-item>VIEW PORTFOLIO</a>
-        </div></div>
-      </div>
     </div>
   </ng-container>
 </div>

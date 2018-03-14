@@ -1,3 +1,6 @@
+<div class="skip-navigation blind">
+    <a href="#Menu_Profile" role="button">핵심 내용으로 바로가기</a>
+</div>
 <ol *ngIf="false" aria-controls="MainVisualSlider" class="carousel-indicators">
   <li *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;" [attr.aria-selected]="first" [attr.aria-controls]="'SliderItem0'+(i+1)"  data-target="#carousel-example-generic" [attr.data-slide-to]="i">
     <button *ngIf="first" class="active">active</button>

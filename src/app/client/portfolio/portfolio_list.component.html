@@ -17,7 +17,7 @@
                   <span class="blind">디자인 작업 참가 {{item.des_percent}} 퍼센트</span>
                   <span class="blind">퍼블리싱 작업 참가 {{item.publ_percent}} 퍼센트</span>
                   <span class="blind">개발 작업 참가 {{item.dev_percent}} 퍼센트</span>
-                  <div tabindex="-1">
+                  <div aria-hidden="true" tabindex="-1">
                     <chart-parent [chartdata01]="item.des_percent" [chartdata02]="100-item.des_percent" [type]="'design'"></chart-parent>
                     <chart-parent [chartdata01]="item.publ_percent" [chartdata02]="100-item.publ_percent" [type]="'publisher'"></chart-parent>
                     <chart-parent [chartdata01]="item.dev_percent" [chartdata02]="100-item.dev_percent" [type]="'developer'"></chart-parent>

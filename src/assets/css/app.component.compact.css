@@ -8,6 +8,8 @@ html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-ad
 
 body { margin: 0; }
 
+iframe { visibility: hidden; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
 audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }

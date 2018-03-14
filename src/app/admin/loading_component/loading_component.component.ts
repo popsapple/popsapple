@@ -27,11 +27,17 @@ export class LoadingComponent implements OnInit {
             let scroll_loading = Math.floor(scroll_loading_/10)*10;
             that.active_class = that.class_list+" point"+scroll_loading;
             that.renderer.setElementAttribute(that.loading_el.el, 'class', that.active_class);
+            that.document.querySelector("gnb").setAttribute("tabindex","-1");
+            that.document.querySelector("main").setAttribute("tabindex","-1");
+            that.document.querySelector("copyright-item").setAttribute("tabindex","-1");
           }
         }
         that.client.onloadend = function(pe) {
           setTimeout(function(){
             that.renderer.setElementAttribute(that.loading_el.el, 'class', that.active_class+' done');
+            that.document.querySelector("gnb").removeAttribute("tabindex");
+            that.document.querySelector("main").removeAttribute("tabindex");
+            that.document.querySelector("copyright-item").removeAttribute("tabindex");
           },1000);
         }
       }else{

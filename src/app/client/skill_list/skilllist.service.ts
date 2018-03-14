@@ -1,4 +1,4 @@
-import { Component, Injectable, ViewChild } from '@angular/core';
+import { Component, Injectable, ViewChild, AfterViewInit,ElementRef,Renderer } from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 @Component({
   selector: 'skill-chart',
@@ -22,7 +22,7 @@ import { BaseChartDirective } from 'ng2-charts';
   `]
 })
 @Injectable()
-export class MainSkillListService {
+export class MainSkillListService implements AfterViewInit {
   @ViewChild(BaseChartDirective) public _chart;
   public polarAreaChartLabels:string[] = ['Reactive web', 'Accessibility Web', 'Work efficiency', 'Teamwork'];
   public polarAreaChartData:number[] = [100, 95, 100, 90];
@@ -55,5 +55,13 @@ export class MainSkillListService {
   // events
   public chartClicked(e:any):void {
 
+  }
+
+  constructor(private el: ElementRef) {
+  }
+  
+  ngAfterViewInit(){
+    this.el.nativeElement.querySelector("iframe").setAttribute("aria-hidden", "true");
+    this.el.nativeElement.querySelector("iframe").setAttribute("title", "Chart");
   }
 }

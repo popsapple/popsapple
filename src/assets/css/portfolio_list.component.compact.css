@@ -7,7 +7,7 @@ html .btn { border: 0px; text-transform: uppercase; }
 /** variables **/
 body { border: 0rem; }
 
-.portfolio_list ul { position: relative; width: 100%; margin: 0rem; padding: 0rem; overflow: hidden; content: ""; display: block; float: none; clear: both; }
+.portfolio_list ul { position: relative; width: 100%; margin: 0rem; padding: 0rem; overflow: hidden; content: ""; display: block; float: none; clear: both; background: #f2f2f2; }
 
 .portfolio_list ul li { position: absolute; display: block; float: left; top: 0px; left: 0px; height: auto; overflow: hidden; background: black; }
 

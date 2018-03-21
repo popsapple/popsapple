@@ -7,9 +7,9 @@
     <button *ngIf="!first">non-active</button>
   </li>
 </ol>
-<div id="MainVisualSlider" role="group" class="carouselinner carousel-inner">
+<div id="MainVisualSlider" role="list" class="carouselinner carousel-inner">
   <ng-container *ngFor="let item of main_visual_items; let i=index; let first=first; let last=last;">
-    <div *ngIf="first" id="SliderItem0{{i+1}}" role="treeitem" class="item active">
+    <div *ngIf="first" id="SliderItem0{{i+1}}" role="listitem" class="item active">
       <figure>
         <picture>
           <source *ngIf="main_visual_width == 'lg'" media="(max-width: 1200px)" srcset="./../../../assets/image/visual/main_visual01.jpg">
@@ -29,7 +29,7 @@
         </div></div>
       </div>
     </div>
-    <div *ngIf="!first" id="SliderItem0{{i+1}}" role="treeitem" class="item">
+    <div *ngIf="!first" id="SliderItem0{{i+1}}" role="listitem" class="item">
       <figure>
         <picture>
           <source *ngIf="main_visual_width == 'lg'" media="(max-width: 1200px)" srcset="./../../../assets/image/visual/main_visual02.jpg">

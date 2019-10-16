@@ -21,7 +21,7 @@
               [href]="getUrl(item.url)"
               class="figure"
               target="{{
-                getUrl(item.url).indexOf('alert') != -1 ? _self : _blank
+                (getUrl(item.url) + '').indexOf('alert') != -1 ? _self : _blank
               }}"
               title="{{ item.title }} 바로가기"
             >

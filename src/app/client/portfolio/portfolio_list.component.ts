@@ -4,27 +4,10 @@ import { Http, Headers, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 import { MainVisualComponent } from "./../main_page/main_page.component";
 import { Pipe, PipeTransform } from "@angular/core";
-import { DomSanitizer } from "@angular/platform-browser";
+import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 //import { CopyrightComponent } from './copyright.component';
 import "rxjs/add/operator/catch";
 import "rxjs/add/operator/map";
-
-@Pipe({
-  name: "safeHtml"
-})
-export class SafeHtmlPipe implements PipeTransform {
-  constructor(private sanitizer: DomSanitizer) {}
-
-  transform(value: any, args?: any): any {
-    if (value !== null && value.indexOf("(") != -1) {
-      console.log("변형 11 " + value);
-      return this.sanitizer.bypassSecurityTrustHtml(value);
-    } else {
-      console.log("원래값 " + value);
-      return value;
-    }
-  }
-}
 
 @Component({
   selector: "portfolio-list",
@@ -36,6 +19,8 @@ export class PortfolioListComponent implements OnInit {
   portfolio: PortfolioData;
   portfolio_list: PortfolioListData;
   portfolio_list_flex_script: any;
+  getUrl: (url: string) => SafeUrl;
+  sanitizer: DomSanitizer;
 
   constructor(private http: Http) {}
   ngOnInit() {
@@ -44,6 +29,9 @@ export class PortfolioListComponent implements OnInit {
       data => {
         this.portfolio = {
           portfolio_list: data.json()
+        };
+        this.getUrl = (url: string) => {
+          return this.sanitizer.bypassSecurityTrustUrl(url);
         };
         this.portfolio_list_flex_script = new LoadTemplateScript().setScript(
           "./../../assets/js/movefollitem.js"

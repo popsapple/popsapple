@@ -18,7 +18,7 @@
         <section class="portfolio_info">
           <div class="top">
             <a
-              [href]="item.url | SafeHtmlPipe"
+              [href]="item.url | safeHtml"
               class="figure"
               target="_blank"
               title="{{ item.title }} 바로가기"

@@ -17,7 +17,7 @@ export class SafeHtmlPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
     if (value.indexOf("(") != -1) {
-      console.log("변형");
+      console.log("변형 " + value);
       return this.sanitizer.bypassSecurityTrustHtml(value);
     } else {
       return value;

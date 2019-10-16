@@ -18,6 +18,7 @@ export class PortfolioListComponent implements OnInit {
   portfolio_list: PortfolioListData;
   portfolio_list_flex_script: any;
   getUrl: (url: string) => SafeUrl;
+  checkTarget: (url: string) => string;
 
   constructor(private http: Http, private sanitizer: DomSanitizer) {}
   ngOnInit() {
@@ -29,6 +30,14 @@ export class PortfolioListComponent implements OnInit {
         };
         this.getUrl = (url: string) => {
           return this.sanitizer.bypassSecurityTrustUrl(url);
+        };
+
+        this.checkTarget = (url: string) => {
+          console.log("타겟체크" + url);
+          if (url.indexOf("alert") != -1) {
+            return "_self";
+          }
+          return "_blank";
         };
         this.portfolio_list_flex_script = new LoadTemplateScript().setScript(
           "./../../assets/js/movefollitem.js"

@@ -19,6 +19,7 @@ import { MainSkillList } from "./skill_list/skilllist.component";
 import { MainSkillListService } from "./skill_list/skilllist.service";
 import { CopyrightComponent } from "./copyright/copyright.component";
 import { ScrollPointCheckDirective } from "./scrollpoint_ele/scrollpoint.directive";
+import { SafeHtmlPipe } from "./portfolio/portfolio_list.component";
 
 enableProdMode();
 @NgModule({
@@ -35,7 +36,8 @@ enableProdMode();
     MainSkillList,
     MainSkillListService,
     CopyrightComponent,
-    ScrollPointCheckDirective
+    ScrollPointCheckDirective,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ enableProdMode();
     ChartsModule,
     LibCommonModule
   ],
+  providers: [SafeHtmlPipe],
   exports: [],
   bootstrap: [ClientRootComponent]
 })

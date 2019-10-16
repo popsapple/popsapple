@@ -20,7 +20,7 @@
             <a
               [href]="getUrl(item.url)"
               class="figure"
-              target="_blank"
+              target="{{ item.url.indexOf('alert') != -1 ? _self : _blank }}"
               title="{{ item.title }} 바로가기"
             >
               <div class="table">

@@ -19,9 +19,6 @@ export class SafeHtmlPipe implements PipeTransform {
     if (value !== null && value.indexOf("(") != -1) {
       console.log("변형 11 " + value);
       return this.sanitizer.bypassSecurityTrustHtml(value);
-    } else {
-      console.log("변형 22 " + value);
-      return value;
     }
   }
 }

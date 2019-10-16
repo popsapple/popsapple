@@ -1,24 +1,56 @@
-<a href="#Menu_Skilllist" role="button" class="skip-navigation blind">포트폴리오 건너뛰기</a>
+<a href="#Menu_Skilllist" role="button" class="skip-navigation blind"
+  >포트폴리오 건너뛰기</a
+>
 <section id="Menu_Portfolio" class="portfolio_list">
   <h2 class="blind_item">
     포트폴리오
   </h2>
   <ng-container *ngIf="portfolio">
     <ul>
-      <li *ngFor="let item of portfolio.portfolio_list; let i=index; let first=first; let last=last;">
+      <li
+        *ngFor="
+          let item of portfolio.portfolio_list;
+          let i = index;
+          let first = first;
+          let last = last
+        "
+      >
         <section class="portfolio_info">
           <div class="top">
-              <a [href]="item.url" class="figure" target="_blank" title="{{item.title}} 바로가기">
-                <div class="table">
+            <a
+              [href]="item.url | SafeHtmlPipe"
+              class="figure"
+              target="_blank"
+              title="{{ item.title }} 바로가기"
+            >
+              <div class="table">
                 <div class="cell">
-                  <h3>{{item.title}}</h3>
-                  <span class="blind">디자인 작업 참가 {{item.des_percent}} 퍼센트</span>
-                  <span class="blind">퍼블리싱 작업 참가 {{item.publ_percent}} 퍼센트</span>
-                  <span class="blind">개발 작업 참가 {{item.dev_percent}} 퍼센트</span>
+                  <h3>{{ item.title }}</h3>
+                  <span class="blind"
+                    >디자인 작업 참가 {{ item.des_percent }} 퍼센트</span
+                  >
+                  <span class="blind"
+                    >퍼블리싱 작업 참가 {{ item.publ_percent }} 퍼센트</span
+                  >
+                  <span class="blind"
+                    >개발 작업 참가 {{ item.dev_percent }} 퍼센트</span
+                  >
                   <div aria-hidden="true" tabindex="-1">
-                    <chart-parent [chartdata01]="item.des_percent" [chartdata02]="100-item.des_percent" [type]="'design'"></chart-parent>
-                    <chart-parent [chartdata01]="item.publ_percent" [chartdata02]="100-item.publ_percent" [type]="'publisher'"></chart-parent>
-                    <chart-parent [chartdata01]="item.dev_percent" [chartdata02]="100-item.dev_percent" [type]="'developer'"></chart-parent>
+                    <chart-parent
+                      [chartdata01]="item.des_percent"
+                      [chartdata02]="100 - item.des_percent"
+                      [type]="'design'"
+                    ></chart-parent>
+                    <chart-parent
+                      [chartdata01]="item.publ_percent"
+                      [chartdata02]="100 - item.publ_percent"
+                      [type]="'publisher'"
+                    ></chart-parent>
+                    <chart-parent
+                      [chartdata01]="item.dev_percent"
+                      [chartdata02]="100 - item.dev_percent"
+                      [type]="'developer'"
+                    ></chart-parent>
                   </div>
                 </div>
               </div>
@@ -26,9 +58,9 @@
           </div>
           <figure>
             <picture>
-              <img [src]="item.thumnail" [alt]="item.title">
+              <img [src]="item.thumnail" [alt]="item.title" />
             </picture>
-            <figcaption class="blind">{{item.title}}</figcaption>
+            <figcaption class="blind">{{ item.title }}</figcaption>
           </figure>
         </section>
       </li>

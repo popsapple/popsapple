@@ -16,7 +16,12 @@ export class SafeHtmlPipe implements PipeTransform {
   constructor(private sanitizer: DomSanitizer) {}
 
   transform(value: any, args?: any): any {
-    return this.sanitizer.bypassSecurityTrustHtml(value);
+    if (value.indexOf("(") != -1) {
+      console.log("변형");
+      return this.sanitizer.bypassSecurityTrustHtml(value);
+    } else {
+      return value;
+    }
   }
 }
 

@@ -13,7 +13,7 @@ import { MainPageComponent } from "./app.component";
 
 enableProdMode();
 @NgModule({
-  declarations: [MainPageComponent],
+  declarations: [MainPageComponent, SafeHtmlPipe],
   imports: [
     BrowserModule,
     FormsModule,
@@ -22,8 +22,7 @@ enableProdMode();
     AdminSideModule,
     ClientSideModule,
     RouterModule,
-    routing,
-    SafeHtmlPipe
+    routing
   ],
   providers: [],
   bootstrap: [MainPageComponent]
